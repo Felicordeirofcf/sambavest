@@ -20,7 +20,7 @@
     height: 100%;
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
-    background-size: cover;
+    background-size: contain; /* Alterado de 'cover' para 'contain' */
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
