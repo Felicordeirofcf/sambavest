@@ -363,3 +363,19 @@
     }
 }
 
+
+
+.footer-bottom p a {
+    color: #00bfff; /* Uma cor vibrante, como azul-céu */
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
+}
+
+.footer-bottom p a:hover {
+    color: #00e0ff; /* Cor um pouco mais clara no hover */
+    text-shadow: 0 0 10px rgba(0, 224, 255, 0.8);
+    transform: translateY(-2px);
+}
+
