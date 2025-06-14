@@ -73,16 +73,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const shippingButtons = document.querySelectorAll('.calc-shipping-btn');
     shippingButtons.forEach(button => {
         button.addEventListener('click', function() {
-            const input = this.previousElementSibling;
+            const calculator = this.closest('.shipping-calculator');
+            const input = calculator.querySelector('.cep-input');
+            const resultDiv = calculator.querySelector('.shipping-result');
             const cep = input.value.replace(/\D/g, '');
             
             if (cep.length === 8) {
-                // Simulate shipping calculation
+                // Show loading state
                 this.textContent = 'Calculando...';
                 this.disabled = true;
                 
                 setTimeout(() => {
-                    alert(`Frete para ${input.value}: R$ 15,90 (PAC) | R$ 25,90 (SEDEX)`);
+                    // Show result in the card
+                    resultDiv.style.display = 'block';
                     this.textContent = 'Calcular Frete';
                     this.disabled = false;
                 }, 1500);
