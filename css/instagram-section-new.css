@@ -1,0 +1,144 @@
+/* Instagram Section Styles */
+.instagram-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.instagram-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.instagram-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.instagram-handle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e1306c;
+    margin-bottom: 5px;
+}
+
+.instagram-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.instagram-feed {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.instagram-post {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.instagram-post:hover {
+    transform: scale(1.05);
+}
+
+.instagram-post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.post-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.instagram-post:hover .post-overlay {
+    opacity: 1;
+}
+
+.play-button {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.post-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.instagram-follow {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.btn-instagram:hover {
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .instagram-feed {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .instagram-title {
+        font-size: 2rem;
+    }
+    
+    .instagram-handle {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-section {
+        padding: 60px 0;
+    }
+    
+    .instagram-feed {
+        gap: 8px;
+    }
+    
+    .play-button {
+        font-size: 1.5rem;
+    }
+}
+

@@ -1,0 +1,103 @@
+/* Preços mais atrativos - Estilo promocional */
+.product-prices {
+    margin: 15px 0;
+    min-height: 120px; /* Garante espaço suficiente */
+}
+
+.original-price {
+    font-size: 0.9rem;
+    color: #999;
+    text-decoration: line-through;
+    margin-bottom: 8px; /* Aumentado para dar mais espaço */
+    display: block;
+}
+
+.current-price {
+    font-size: 1.6rem; /* Reduzido ligeiramente */
+    font-weight: 700;
+    color: #e74c3c;
+    margin-bottom: 10px; /* Aumentado para dar mais espaço */
+    margin-top: 5px; /* Adicionado margem superior */
+    position: relative;
+    display: block;
+}
+
+.current-price::before {
+    content: "POR APENAS";
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #666;
+    position: absolute;
+    top: -18px; /* Ajustado para não sobrepor */
+    left: 0;
+}
+
+.installment-price {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 8px; /* Aumentado */
+    margin-top: 5px; /* Adicionado */
+}
+
+.pix-price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #00a86b;
+    background: #e8f5e8;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 0;
+    margin-top: 8px; /* Adicionado */
+    position: relative;
+    padding-left: 35px;
+}
+
+.pix-price::before {
+    content: "💳";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Destaque para promoções */
+.product-card {
+    position: relative;
+    min-height: 600px; /* Garante altura mínima para acomodar todos os elementos */
+}
+
+.promotion-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 5;
+}
+
+/* Animação para chamar atenção - removida para evitar sobreposição */
+.current-price {
+    /* animation: pulse 2s infinite; - removido */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .current-price {
+        font-size: 1.4rem;
+    }
+    
+    .pix-price {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+        padding-left: 30px;
+    }
+    
+    .product-card {
+        min-height: 550px;
+    }
+}
+

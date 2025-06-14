@@ -1,4 +1,4 @@
-// Featured Products Carousel Functionality
+// Featured Products Carousel Functionality - Fixed Version
 function showImage(button, imageIndex) {
     const card = button.closest(".product-card");
     const images = card.querySelectorAll(".product-image");
@@ -22,6 +22,21 @@ function showImage(button, imageIndex) {
     if (button) {
         button.classList.add("active");
     }
+}
+
+// Setup event listeners for carousel dots
+function setupCarouselEventListeners() {
+    const productCards = document.querySelectorAll(".product-card");
+    
+    productCards.forEach((card, cardIndex) => {
+        const dots = card.querySelectorAll(".dot");
+        
+        dots.forEach((dot, dotIndex) => {
+            dot.addEventListener('click', function() {
+                showImage(this, dotIndex);
+            });
+        });
+    });
 }
 
 // Auto-rotate images every 4 seconds
@@ -74,11 +89,8 @@ function formatCEP(input) {
     input.value = value;
 }
 
-// Add event listeners for CEP inputs
-document.addEventListener("DOMContentLoaded", function() {
-    // Auto-rotate images
-    autoRotateImages();
-    
+// Setup shipping calculator
+function setupShippingCalculator() {
     // CEP input formatting
     const cepInputs = document.querySelectorAll(".cep-input");
     cepInputs.forEach(input => {
@@ -87,7 +99,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         
         input.addEventListener("keypress", function(e) {
-            // Only allow numbers and dash            if (!/\d/.test(e.key) && !["Backspace", "Delete", "Tab", "Enter"].includes(e.key)) {
+            // Only allow numbers and dash
+            if (!/\d/.test(e.key) && !["Backspace", "Delete", "Tab", "Enter"].includes(e.key)) {
                 e.preventDefault();
             }
         });
@@ -100,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const calculator = this.closest(".shipping-calculator");
             const input = calculator.querySelector(".cep-input");
             const resultDiv = calculator.querySelector(".shipping-result");
-            const cep = input.value.replace(/\\D/g, "");
+            const cep = input.value.replace(/\D/g, "");
             
             if (cep.length === 8) {
                 // Show loading state
@@ -119,6 +132,20 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+}
+
+// Add event listeners for CEP inputs
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("Featured products script loaded");
+    
+    // Setup carousel event listeners
+    setupCarouselEventListeners();
+    
+    // Auto-rotate images
+    autoRotateImages();
+    
+    // Setup shipping calculator
+    setupShippingCalculator();
 });
 
 // Smooth scroll to section
@@ -127,3 +154,4 @@ function scrollToFeaturedProducts() {
         behavior: "smooth"
     });
 }
+
