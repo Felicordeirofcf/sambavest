@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- SEO Técnico -->
-    <title>Samba Vest - Fantasias e Roupas de Carnaval Oficiais | Loja Online</title>
-    <meta name="description" content="Compre fantasias oficiais e licenciadas do Carnaval Carioca na Samba Vest. Roupas de carnaval, acessórios e fantasias com qualidade premium. Entrega para todo Brasil.">
-    <meta name="keywords" content="fantasias carnaval, roupas carnaval, carnaval carioca, fantasias oficiais, samba vest, carnaval rio de janeiro, fantasias licenciadas">
+    <title>Samba Vest - Camisas Oficiais e Licenciadas do Carnaval Carioca</title>
+    <meta name="description" content="Vista a tradição e a paixão do samba com nossas roupas oficiais licenciadas. Camisas das escolas de samba do Rio de Janeiro com qualidade premium e entrega para todo Brasil.">
+    <meta name="keywords" content="camisas carnaval, roupas carnaval, carnaval carioca, camisas oficiais, samba vest, carnaval rio de janeiro, camisas licenciadas, escolas de samba">
     <meta name="author" content="Samba Vest">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://sambavest.com/">
@@ -17,8 +17,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sambavest.com/">
-    <meta property="og:title" content="Samba Vest - Fantasias e Roupas de Carnaval Oficiais">
-    <meta property="og:description" content="Compre fantasias oficiais e licenciadas do Carnaval Carioca na Samba Vest. Roupas de carnaval, acessórios e fantasias com qualidade premium.">
+    <meta property="og:title" content="Samba Vest - Camisas Oficiais e Licenciadas do Carnaval Carioca">
+    <meta property="og:description" content="Vista a tradição e a paixão do samba com nossas roupas oficiais licenciadas. Camisas das escolas de samba do Rio de Janeiro com qualidade premium.">
     <meta property="og:image" content="https://sambavest.com/images/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -28,8 +28,8 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://sambavest.com/">
-    <meta name="twitter:title" content="Samba Vest - Fantasias e Roupas de Carnaval Oficiais">
-    <meta name="twitter:description" content="Compre fantasias oficiais e licenciadas do Carnaval Carioca na Samba Vest. Roupas de carnaval, acessórios e fantasias com qualidade premium.">
+    <meta name="twitter:title" content="Samba Vest - Camisas Oficiais e Licenciadas do Carnaval Carioca">
+    <meta name="twitter:description" content="Vista a tradição e a paixão do samba com nossas roupas oficiais licenciadas. Camisas das escolas de samba do Rio de Janeiro com qualidade premium.">
     <meta name="twitter:image" content="https://sambavest.com/images/twitter-image.jpg">
     <meta name="twitter:creator" content="@sambavest">
     
@@ -69,17 +69,6 @@
             ttq.page();
         }(window, document, 'ttq');
     </script>
-    
-    <!-- Google Ads (Opcional) -->
-    <!-- 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-CONVERSION_ID'); // Substitua pelo seu ID de conversão
-    </script>
-    -->
     
     <!-- CSS Interno -->
     <style>
@@ -268,6 +257,7 @@
             font-weight: 700;
             margin-bottom: 1rem;
             line-height: 1.2;
+            animation: slideInFromLeft 1s ease-out;
         }
         
         .hero p {
@@ -277,6 +267,7 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            animation: slideInFromRight 1s ease-out 0.3s both;
         }
         
         .cta-button {
@@ -290,12 +281,47 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            animation: fadeInUp 1s ease-out 0.6s both;
         }
         
         .cta-button:hover {
             background: #059669;
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+        }
+        
+        /* Animações do texto deslizante */
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
         /* Fim: Banner Principal */
         
@@ -345,9 +371,16 @@
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
         }
         
-        .product-image {
+        .product-image-container {
+            position: relative;
             width: 100%;
             height: 250px;
+            overflow: hidden;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 100%;
             background: linear-gradient(45deg, #f3f4f6, #e5e7eb);
             display: flex;
             align-items: center;
@@ -355,13 +388,37 @@
             color: #9ca3af;
             font-size: 1rem;
             position: relative;
-            overflow: hidden;
         }
         
         .product-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+        
+        .carousel-nav {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 5px;
+            z-index: 10;
+        }
+        
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-dot.active {
+            background: white;
+            transform: scale(1.2);
         }
         
         .product-info {
@@ -496,26 +553,25 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 1rem;
-            color: white;
             font-size: 1.5rem;
         }
         
-        .advantage-title {
+        .advantage-item h3 {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
             color: #1f2937;
         }
         
-        .advantage-description {
+        .advantage-item p {
             color: #6b7280;
-            font-size: 0.95rem;
+            line-height: 1.6;
         }
         /* Fim: Vantagens */
         
         /* Início: Instagram */
-        .instagram-section {
+        .instagram {
             padding: 80px 0;
             background: #f9fafb;
         }
@@ -527,7 +583,7 @@
             margin-top: 3rem;
         }
         
-        .instagram-card {
+        .instagram-post {
             background: white;
             border-radius: 15px;
             overflow: hidden;
@@ -535,12 +591,12 @@
             transition: all 0.3s ease;
         }
         
-        .instagram-card:hover {
-            transform: translateY(-3px);
+        .instagram-post:hover {
+            transform: translateY(-5px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
         }
         
-        .instagram-follow-card {
+        .follow-card {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             display: flex;
@@ -548,18 +604,23 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 3rem 2rem;
+            padding: 2rem;
             min-height: 300px;
         }
         
-        .instagram-follow-card h3 {
+        .follow-card h3 {
             font-family: 'Poppins', sans-serif;
             font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
         
-        .instagram-follow-button {
+        .follow-card p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .follow-button {
             background: white;
             color: #2563eb;
             padding: 1rem 2rem;
@@ -569,16 +630,9 @@
             transition: all 0.3s ease;
         }
         
-        .instagram-follow-button:hover {
+        .follow-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
-        }
-        
-        .instagram-media {
-            border: none !important;
-            margin: 0 !important;
-            max-width: 100% !important;
-            width: 100% !important;
         }
         /* Fim: Instagram */
         
@@ -588,42 +642,13 @@
             background: white;
         }
         
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 3rem;
-        }
-        
-        .contact-info h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #1f2937;
-        }
-        
-        .contact-info p {
-            color: #6b7280;
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            background: #2563eb;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f9fafb;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
         
         .form-group {
@@ -659,11 +684,13 @@
         }
         
         .submit-button {
+            width: 100%;
             background: #2563eb;
             color: white;
-            padding: 0.75rem 2rem;
             border: none;
+            padding: 1rem;
             border-radius: 8px;
+            font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -676,42 +703,44 @@
         /* Fim: Contato */
         
         /* Início: Cálculo de Frete */
-        .freight-calculator {
+        .shipping-calculator {
             background: #e0f2fe;
             padding: 2rem;
             border-radius: 15px;
-            margin: 2rem 0;
+            margin-top: 2rem;
+            text-align: center;
         }
         
-        .freight-calculator h3 {
+        .shipping-calculator h3 {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 1rem;
             color: #1f2937;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
         
-        .freight-form {
+        .shipping-form {
             display: flex;
             gap: 1rem;
             align-items: end;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         
-        .freight-input {
+        .shipping-input {
             flex: 1;
+            min-width: 200px;
         }
         
-        .freight-input label {
+        .shipping-input label {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
             color: #374151;
+            text-align: left;
         }
         
-        .freight-input input {
+        .shipping-input input {
             width: 100%;
             padding: 0.75rem;
             border: 1px solid #d1d5db;
@@ -719,22 +748,23 @@
             font-size: 1rem;
         }
         
-        .freight-button {
+        .calculate-button {
             background: #0891b2;
             color: white;
-            padding: 0.75rem 1.5rem;
             border: none;
+            padding: 0.75rem 1.5rem;
             border-radius: 8px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
+            height: fit-content;
         }
         
-        .freight-button:hover {
+        .calculate-button:hover {
             background: #0e7490;
         }
         
-        .freight-result {
+        .shipping-result {
             margin-top: 1rem;
             padding: 1rem;
             background: white;
@@ -747,7 +777,7 @@
         .footer {
             background: #1f2937;
             color: white;
-            padding: 3rem 0 1rem;
+            padding: 3rem 0 2rem;
         }
         
         .footer-content {
@@ -759,27 +789,22 @@
         
         .footer-section h3 {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 1rem;
+            color: #f9fafb;
         }
         
-        .footer-section ul {
-            list-style: none;
-        }
-        
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer-section ul li a {
+        .footer-section p,
+        .footer-section a {
             color: #d1d5db;
             text-decoration: none;
+            line-height: 1.6;
             transition: color 0.3s ease;
         }
         
-        .footer-section ul li a:hover {
-            color: white;
+        .footer-section a:hover {
+            color: #2563eb;
         }
         
         .social-links {
@@ -789,6 +814,7 @@
         }
         
         .social-link {
+            display: inline-block;
             width: 40px;
             height: 40px;
             background: #374151;
@@ -796,8 +822,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            text-decoration: none;
             transition: all 0.3s ease;
         }
         
@@ -808,7 +832,7 @@
         
         .footer-bottom {
             border-top: 1px solid #374151;
-            padding-top: 1rem;
+            padding-top: 2rem;
             text-align: center;
             color: #9ca3af;
         }
@@ -833,7 +857,7 @@
             }
             
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
             
             .section-title {
@@ -844,18 +868,24 @@
                 grid-template-columns: 1fr;
             }
             
-            .contact-grid {
+            .advantages-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .freight-form {
-                flex-direction: column;
-                gap: 1rem;
             }
             
             .instagram-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .shipping-form {
+                flex-direction: column;
+            }
+            
+            .shipping-input {
+                min-width: 100%;
+            }
+            
+            .container {
+                padding: 0 15px;
             }
         }
     </style>
@@ -866,24 +896,24 @@
     <header class="header">
         <nav class="nav container">
             <a href="#" class="logo">
-                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAoAFoDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEABVEAAA==" alt="Samba Vest">
+                <img src="logo.jpg" alt="Samba Vest - Camisas Oficiais e Licenciadas do Carnaval Carioca">
             </a>
             
             <ul class="nav-menu">
-                <li><a href="#produtos" class="nav-link">PRODUTOS</a></li>
-                <li><a href="#sobre" class="nav-link">SOBRE NÓS</a></li>
-                <li><a href="#contato" class="nav-link">CONTATO</a></li>
+                <li><a href="#products" class="nav-link">PRODUTOS</a></li>
+                <li><a href="about.html" class="nav-link">SOBRE NÓS</a></li>
+                <li><a href="#contact" class="nav-link">CONTATO</a></li>
             </ul>
             
             <div class="nav-actions">
-                <button class="nav-icon" aria-label="Buscar">🔍</button>
-                <button class="nav-icon" aria-label="Usuário">👤</button>
-                <button class="nav-icon" aria-label="Favoritos">❤️</button>
-                <button class="cart-icon" aria-label="Carrinho">
+                <button class="nav-icon">🔍</button>
+                <button class="nav-icon">👤</button>
+                <button class="nav-icon">❤️</button>
+                <button class="cart-icon" onclick="toggleCart()">
                     🛒
                     <span class="cart-count" id="cart-count">0</span>
                 </button>
-                <button class="mobile-menu-toggle" aria-label="Menu">☰</button>
+                <button class="mobile-menu-toggle">☰</button>
             </div>
         </nav>
     </header>
@@ -893,88 +923,85 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Fantasias Oficiais do Carnaval Carioca</h1>
-                <p>Vista a tradição e a paixão do samba com nossas fantasias e roupas oficiais licenciadas. Qualidade premium e entrega para todo o Brasil.</p>
-                <a href="#produtos" class="cta-button">Ver Produtos</a>
+                <h1>Camisas Oficiais e Licenciadas do Carnaval Carioca</h1>
+                <p>Vista a tradição e a paixão do samba com nossas roupas oficiais licenciadas</p>
+                <a href="#products" class="cta-button">Ver Produtos</a>
             </div>
         </div>
     </section>
     <!-- Fim: Banner Principal -->
 
     <!-- Início: Produtos -->
-    <section id="produtos" class="products">
+    <section id="products" class="products">
         <div class="container">
             <h2 class="section-title">Nossos Produtos</h2>
-            <p class="section-subtitle">Fantasias oficiais e licenciadas do Carnaval Carioca com qualidade garantida e entrega para todo o Brasil</p>
+            <p class="section-subtitle">Camisas oficiais e licenciadas do Carnaval Carioca com qualidade garantida e entrega para todo o Brasil</p>
             
             <div class="products-grid">
-                <!-- Produto 1: Camisa Salgueiro Enredo 2025 -->
+                <!-- Card 1: Camisa Salgueiro -->
                 <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://sambavest.com/wp-content/uploads/2024/12/camisa-salgueiro-enredo-2025-frente.webp" alt="Camisa Salgueiro Enredo 2025">
+                    <div class="product-image-container">
+                        <div class="product-image">
+                            <img src="camisa-salgueiro-enredo-2025-frente-700x700.jpg" alt="Camisa Salgueiro Enredo 2025 - Frente" id="salgueiro-img">
+                        </div>
+                        <div class="carousel-nav">
+                            <span class="carousel-dot active" onclick="changeImage('salgueiro', 0)"></span>
+                            <span class="carousel-dot" onclick="changeImage('salgueiro', 1)"></span>
+                        </div>
                     </div>
                     <div class="product-info">
                         <h3 class="product-name">Camisa Salgueiro Enredo 2025</h3>
                         <p class="product-category">Camisas de Escola de Samba</p>
                         <div class="product-price">R$ 99,90</div>
-                        <div class="product-installments">em até 3x de R$ 33,30 sem juros</div>
-                        <div class="product-pix">à vista R$ 89,91 no PIX</div>
-                        <a href="https://sambavest.com/produto/camisa-salgueiro-enredo-2025/" class="buy-button">VER OPÇÕES</a>
+                        <p class="product-installments">em até 3x de R$ 33,30 sem juros</p>
+                        <p class="product-pix">à vista R$ 89,91 no PIX</p>
+                        <button class="buy-button" onclick="addToCart('Camisa Salgueiro Enredo 2025', 99.90)" data-product-id="salgueiro-2025" data-product-name="Camisa Salgueiro Enredo 2025" data-product-price="99.90">Adicionar ao Carrinho</button>
                     </div>
                 </div>
 
-                <!-- Produto 2: Camisa Viradouro Enredo 2025 -->
+                <!-- Card 2: Camisa Viradouro -->
                 <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://sambavest.com/wp-content/uploads/2024/12/camisa-viradouro-enredo-2025-frente.webp" alt="Camisa Viradouro Enredo 2025">
+                    <div class="product-image-container">
+                        <div class="product-image">
+                            <img src="camisa-viradouro-enredo-2025-frente.jpg" alt="Camisa Viradouro Enredo 2025 - Frente" id="viradouro-img">
+                        </div>
+                        <div class="carousel-nav">
+                            <span class="carousel-dot active" onclick="changeImage('viradouro', 0)"></span>
+                            <span class="carousel-dot" onclick="changeImage('viradouro', 1)"></span>
+                        </div>
                     </div>
                     <div class="product-info">
                         <h3 class="product-name">Camisa Viradouro Enredo 2025</h3>
                         <p class="product-category">Camisas de Escola de Samba</p>
                         <div class="product-price">R$ 79,90</div>
-                        <div class="product-installments">em até 3x de R$ 26,63 sem juros</div>
-                        <div class="product-pix">à vista R$ 71,91 no PIX</div>
-                        <a href="https://sambavest.com/produto/camisa-viradouro-enredo-2025/" class="buy-button">VER OPÇÕES</a>
+                        <p class="product-installments">em até 3x de R$ 26,63 sem juros</p>
+                        <p class="product-pix">à vista R$ 71,91 no PIX</p>
+                        <button class="buy-button" onclick="addToCart('Camisa Viradouro Enredo 2025', 79.90)" data-product-id="viradouro-2025" data-product-name="Camisa Viradouro Enredo 2025" data-product-price="79.90">Adicionar ao Carrinho</button>
                     </div>
                 </div>
 
-                <!-- Produto 3: Promoção das Campeãs -->
+                <!-- Card 3: Promoção das Campeãs -->
                 <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://sambavest.com/wp-content/uploads/2024/12/promocao-das-campeas.webp" alt="Promoção das Campeãs">
+                    <div class="product-image-container">
+                        <div class="product-image">
+                            <img src="promocao-das-campeas.jpg" alt="Promoção das Campeãs">
+                        </div>
                     </div>
                     <div class="product-info">
                         <h3 class="product-name">Promoção das Campeãs</h3>
                         <p class="product-category">Camisas de Escola de Samba</p>
-                        <div class="product-price">R$ 149,90</div>
-                        <div class="product-installments">em até 3x de R$ 49,97 sem juros</div>
-                        <div class="product-pix">à vista R$ 134,91 no PIX</div>
-                        <a href="https://sambavest.com/produto/promocao-das-campeas/" class="buy-button">VER OPÇÕES</a>
+                        <div class="product-price">R$ 149,90 <span style="font-size: 0.8rem; color: #10b981; font-weight: 500;">38% OFF</span></div>
+                        <p class="product-installments">em até 3x de R$ 49,97 sem juros</p>
+                        <p class="product-pix">à vista R$ 134,91 no PIX</p>
+                        <button class="buy-button" onclick="addToCart('Promoção das Campeãs', 149.90)" data-product-id="promocao-campeas" data-product-name="Promoção das Campeãs" data-product-price="149.90">Adicionar ao Carrinho</button>
                     </div>
                 </div>
 
-                <!-- Card Ver Todos os Produtos -->
+                <!-- Card 4: Ver Todos os Produtos -->
                 <div class="product-card view-all-card">
                     <h3>Ver todos os produtos</h3>
-                    <p>Explore nossa coleção completa de fantasias e acessórios oficiais do Carnaval Carioca</p>
-                    <a href="https://sambavest.com/shop/" class="view-all-button">Ir para a Loja</a>
-                </div>
-            </div>
-
-            <!-- Cálculo de Frete -->
-            <div class="freight-calculator">
-                <h3>📦 Calcule o Frete</h3>
-                <div class="freight-form">
-                    <div class="freight-input">
-                        <label for="cep">Seu CEP</label>
-                        <input type="text" id="cep" placeholder="00000-000" maxlength="9">
-                    </div>
-                    <button class="freight-button" onclick="calculateFreight()">Calcular Frete</button>
-                </div>
-                <div class="freight-result" id="freight-result">
-                    <p><strong>Opções de entrega:</strong></p>
-                    <p>📦 PAC: R$ 15,90 - 8 a 12 dias úteis</p>
-                    <p>🚀 SEDEX: R$ 25,90 - 3 a 5 dias úteis</p>
+                    <p>Explore nossa coleção completa de camisas oficiais e licenciadas das escolas de samba</p>
+                    <a href="https://sambavest.com/shop/" class="view-all-button" target="_blank">Ir para a Loja</a>
                 </div>
             </div>
         </div>
@@ -985,31 +1012,30 @@
     <section class="advantages">
         <div class="container">
             <h2 class="section-title">Por que escolher a Samba Vest?</h2>
-            <p class="section-subtitle">Oferecemos a melhor experiência em fantasias de carnaval com qualidade e tradição</p>
             
             <div class="advantages-grid">
                 <div class="advantage-item">
-                    <div class="advantage-icon">✅</div>
-                    <h3 class="advantage-title">Produtos Oficiais</h3>
-                    <p class="advantage-description">Fantasias e roupas oficialmente licenciadas pelas escolas de samba do Rio de Janeiro</p>
+                    <div class="advantage-icon">✓</div>
+                    <h3>Produtos Oficiais</h3>
+                    <p>Todas as nossas camisas são oficiais e licenciadas diretamente com as escolas de samba</p>
                 </div>
                 
                 <div class="advantage-item">
                     <div class="advantage-icon">🚚</div>
-                    <h3 class="advantage-title">Entrega Nacional</h3>
-                    <p class="advantage-description">Enviamos para todo o Brasil com opções de frete rápido e seguro</p>
+                    <h3>Entrega Nacional</h3>
+                    <p>Enviamos para todo o Brasil com frete calculado e opções de entrega rápida</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-icon">🏆</div>
+                    <h3>Qualidade Premium</h3>
+                    <p>Materiais de alta qualidade e acabamento perfeito em todos os nossos produtos</p>
                 </div>
                 
                 <div class="advantage-item">
                     <div class="advantage-icon">💳</div>
-                    <h3 class="advantage-title">Pagamento Facilitado</h3>
-                    <p class="advantage-description">Parcele em até 12x sem juros ou ganhe desconto no PIX</p>
-                </div>
-                
-                <div class="advantage-item">
-                    <div class="advantage-icon">🔄</div>
-                    <h3 class="advantage-title">Primeira Troca Grátis</h3>
-                    <p class="advantage-description">Garantimos o tamanho perfeito com a primeira troca gratuita</p>
+                    <h3>Pagamento Seguro</h3>
+                    <p>Diversas formas de pagamento com total segurança e proteção dos seus dados</p>
                 </div>
             </div>
         </div>
@@ -1017,31 +1043,29 @@
     <!-- Fim: Vantagens -->
 
     <!-- Início: Instagram -->
-    <section class="instagram-section">
+    <section class="instagram">
         <div class="container">
             <h2 class="section-title">Veja nosso Instagram</h2>
-            <p class="section-subtitle">Acompanhe nosso dia a dia e as novidades do carnaval!</p>
+            <p class="section-subtitle">Acompanhe as novidades, bastidores e muito mais no nosso Instagram oficial</p>
+            
             <div class="instagram-grid">
-                <!-- Card para seguir o perfil -->
-                <div class="instagram-card instagram-follow-card">
-                    <h3>Siga a @sambavest no Instagram</h3>
-                    <a href="https://instagram.com/sambavest" target="_blank" rel="noopener noreferrer" class="instagram-follow-button">Seguir @sambavest</a>
-                </div>
                 <!-- Post 1 -->
-                <div class="instagram-card">
-                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DK0MwOkxJZ5/?igsh=ZHdvZXFoeW8yNzF2" data-instgrm-version="14"></blockquote>
-                </div>
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DK0MwOkxJZ5/?igsh=ZHdvZXFoeW8yNzF2" data-instgrm-version="14"></blockquote>
+                
                 <!-- Post 2 -->
-                <div class="instagram-card">
-                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DKuaAL5R9ye/?igsh=cHVmeWMxbTJhbmI=" data-instgrm-version="14"></blockquote>
-                </div>
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DKuaAL5R9ye/?igsh=cHVmeWMxbTJhbmI=" data-instgrm-version="14"></blockquote>
+                
                 <!-- Post 3 -->
-                <div class="instagram-card">
-                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DKdBpRHJ20O/?igsh=cHlneGdkOW90Mm14" data-instgrm-version="14"></blockquote>
-                </div>
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DKdBpRHJ20O/?igsh=cHlneGdkOW90Mm14" data-instgrm-version="14"></blockquote>
+                
                 <!-- Post 4 -->
-                <div class="instagram-card">
-                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DKQJj2XJknc/?igsh=d3J2czNqYzF6NWg2" data-instgrm-version="14"></blockquote>
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DKQJj2XJknc/?igsh=d3J2czNqYzF6NWg2" data-instgrm-version="14"></blockquote>
+                
+                <!-- Card Seguir @sambavest -->
+                <div class="product-card follow-card">
+                    <h3>Siga a @sambavest no Instagram</h3>
+                    <p>Fique por dentro das novidades, lançamentos e bastidores do mundo do samba</p>
+                    <a href="https://instagram.com/sambavest" class="follow-button" target="_blank">Seguir Agora</a>
                 </div>
             </div>
         </div>
@@ -1049,64 +1073,50 @@
     <!-- Fim: Instagram -->
 
     <!-- Início: Contato -->
-    <section id="contato" class="contact">
+    <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Entre em Contato</h2>
-            <p class="section-subtitle">Tem dúvidas? Estamos aqui para ajudar você a encontrar a fantasia perfeita</p>
+            <p class="section-subtitle">Tem alguma dúvida? Estamos aqui para ajudar!</p>
             
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Fale Conosco</h3>
-                    <p>Nossa equipe está pronta para atender você e esclarecer todas as suas dúvidas sobre nossos produtos.</p>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <strong>E-mail</strong><br>
-                            contato@sambavest.com
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div>
-                            <strong>WhatsApp</strong><br>
-                            (21) 99999-9999
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">🕒</div>
-                        <div>
-                            <strong>Horário de Atendimento</strong><br>
-                            Segunda a Sexta: 9h às 18h
-                        </div>
-                    </div>
+            <form class="contact-form" onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
                 
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nome</label>
-                        <input type="text" id="name" name="name" required>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" placeholder="Como podemos ajudar você?" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Enviar Mensagem</button>
+            </form>
+            
+            <!-- Calculadora de Frete -->
+            <div class="shipping-calculator">
+                <h3>📦 Calcule o Frete</h3>
+                <div class="shipping-form">
+                    <div class="shipping-input">
+                        <label for="cep">Seu CEP</label>
+                        <input type="text" id="cep" placeholder="00000-000" maxlength="9">
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Assunto</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Mensagem</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-button">Enviar Mensagem</button>
-                </form>
+                    <button class="calculate-button" onclick="calculateShipping()">Calcular Frete</button>
+                </div>
+                <div class="shipping-result" id="shipping-result">
+                    <p><strong>Opções de entrega:</strong></p>
+                    <p>📦 PAC: R$ 15,90 - 8 a 12 dias úteis</p>
+                    <p>🚀 SEDEX: R$ 25,90 - 3 a 5 dias úteis</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1118,46 +1128,41 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Samba Vest</h3>
-                    <p>Sua loja oficial de fantasias e roupas do Carnaval Carioca. Tradição, qualidade e paixão pelo samba.</p>
+                    <p>Camisas oficiais e licenciadas do Carnaval Carioca com qualidade premium e entrega para todo o Brasil.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
-                        <a href="https://instagram.com/sambavest" class="social-link" aria-label="Instagram">📷</a>
-                        <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+                        <a href="https://instagram.com/sambavest" class="social-link" target="_blank">📷</a>
+                        <a href="https://facebook.com/sambavest" class="social-link" target="_blank">📘</a>
+                        <a href="https://whatsapp.com/sambavest" class="social-link" target="_blank">💬</a>
                     </div>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="#produtos">Produtos</a></li>
-                        <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                        <li><a href="https://sambavest.com/shop/">Loja Online</a></li>
-                    </ul>
+                    <p><a href="#">Início</a></p>
+                    <p><a href="#products">Produtos</a></p>
+                    <p><a href="about.html">Sobre Nós</a></p>
+                    <p><a href="#contact">Contato</a></p>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Atendimento</h3>
-                    <ul>
-                        <li><a href="#">Central de Ajuda</a></li>
-                        <li><a href="#">Política de Troca</a></li>
-                        <li><a href="#">Frete e Entrega</a></li>
-                        <li><a href="#">Formas de Pagamento</a></li>
-                    </ul>
+                    <p>Segunda a Sexta: 9h às 18h</p>
+                    <p>Sábado: 9h às 14h</p>
+                    <p>WhatsApp: (21) 99999-9999</p>
+                    <p>Email: contato@sambavest.com</p>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Institucional</h3>
-                    <ul>
-                        <li><a href="#">Política de Privacidade</a></li>
-                        <li><a href="#">Termos de Uso</a></li>
-                        <li><a href="#">CNPJ: 00.000.000/0001-00</a></li>
-                    </ul>
+                    <h3>Informações</h3>
+                    <p><a href="#">Política de Privacidade</a></p>
+                    <p><a href="#">Termos de Uso</a></p>
+                    <p><a href="#">Trocas e Devoluções</a></p>
+                    <p><a href="#">Frete e Entrega</a></p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Samba Vest. Todos os direitos reservados.</p>
+                <p>&copy; 2024 Samba Vest. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
@@ -1165,86 +1170,126 @@
 
     <!-- JavaScript -->
     <script>
-        // Função para adicionar produto ao carrinho
-        function addToCart(productName, price, productId) {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        // Variáveis globais
+        let cartItems = [];
+        let cartCount = 0;
+
+        // Imagens dos produtos para carrossel
+        const productImages = {
+            salgueiro: [
+                'camisa-salgueiro-enredo-2025-frente-700x700.jpg',
+                'camisa-salgueiro-enredo-2025-costas-700x700.jpg'
+            ],
+            viradouro: [
+                'camisa-viradouro-enredo-2025-frente.jpg',
+                'camisa-viradouro-enredo-2025-costas.jpg'
+            ]
+        };
+
+        // Função para trocar imagens do carrossel
+        function changeImage(product, index) {
+            const img = document.getElementById(product + '-img');
+            const dots = document.querySelectorAll(`[onclick*="${product}"] .carousel-dot`);
             
-            // Verificar se o produto já existe no carrinho
-            let existingProduct = cart.find(item => item.id === productId);
+            img.src = productImages[product][index];
             
-            if (existingProduct) {
-                existingProduct.quantity += 1;
-            } else {
-                cart.push({
-                    id: productId,
-                    name: productName,
-                    price: price,
-                    quantity: 1
-                });
-            }
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        // Função para adicionar ao carrinho
+        function addToCart(productName, price) {
+            cartItems.push({
+                name: productName,
+                price: price,
+                quantity: 1
+            });
             
-            localStorage.setItem('cart', JSON.stringify(cart));
-            updateCartCount();
+            cartCount++;
+            document.getElementById('cart-count').textContent = cartCount;
             
-            // Tracking para Facebook Pixel
+            // Tracking de evento para pixels
             if (typeof fbq !== 'undefined') {
                 fbq('track', 'AddToCart', {
                     content_name: productName,
-                    content_ids: [productId],
-                    content_type: 'product',
                     value: price,
                     currency: 'BRL'
                 });
             }
             
-            // Tracking para TikTok Pixel
             if (typeof ttq !== 'undefined') {
                 ttq.track('AddToCart', {
                     content_name: productName,
-                    content_id: productId,
-                    content_type: 'product',
                     value: price,
                     currency: 'BRL'
                 });
             }
             
-            // Mostrar notificação
             alert(`${productName} foi adicionado ao carrinho!`);
         }
-        
-        // Função para atualizar contador do carrinho
-        function updateCartCount() {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            document.getElementById('cart-count').textContent = totalItems;
-        }
-        
-        // Função para calcular frete
-        function calculateFreight() {
-            const cepInput = document.getElementById('cep');
-            const cep = cepInput.value.replace(/\D/g, '');
+
+        // Função para alternar carrinho
+        function toggleCart() {
+            if (cartItems.length === 0) {
+                alert('Seu carrinho está vazio!');
+                return;
+            }
             
-            if (cep.length !== 8) {
+            let cartContent = 'Itens no carrinho:\n\n';
+            let total = 0;
+            
+            cartItems.forEach(item => {
+                cartContent += `${item.name} - R$ ${item.price.toFixed(2)}\n`;
+                total += item.price;
+            });
+            
+            cartContent += `\nTotal: R$ ${total.toFixed(2)}`;
+            alert(cartContent);
+        }
+
+        // Função para calcular frete
+        function calculateShipping() {
+            const cep = document.getElementById('cep').value;
+            const result = document.getElementById('shipping-result');
+            
+            if (!cep || cep.length < 8) {
                 alert('Por favor, digite um CEP válido');
                 return;
             }
             
             // Simular cálculo de frete
-            const freightResult = document.getElementById('freight-result');
-            freightResult.style.display = 'block';
+            result.style.display = 'block';
             
             // Aqui você integraria com a API do Melhor Envio
             console.log('Calculando frete para CEP:', cep);
         }
-        
-        // Máscara para CEP
-        document.getElementById('cep').addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\D/g, '');
-            value = value.replace(/^(\d{5})(\d)/, '$1-$2');
-            e.target.value = value;
-        });
-        
-        // Scroll suave para links internos
+
+        // Função para enviar formulário
+        function submitForm(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Tracking de evento para pixels
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Contact');
+            }
+            
+            if (typeof ttq !== 'undefined') {
+                ttq.track('Contact');
+            }
+            
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            event.target.reset();
+        }
+
+        // Smooth scroll para links internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1257,13 +1302,27 @@
                 }
             });
         });
-        
-        // Atualizar contador do carrinho ao carregar a página
-        document.addEventListener('DOMContentLoaded', function() {
-            updateCartCount();
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Máscara para CEP
+        document.getElementById('cep').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 5) {
+                value = value.replace(/^(\d{5})(\d)/, '$1-$2');
+            }
+            e.target.value = value;
         });
     </script>
-    
+
     <!-- Script do Instagram Embed -->
     <script async src="https://www.instagram.com/embed.js"></script>
 </body>
