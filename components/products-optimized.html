@@ -5,140 +5,190 @@
             <p>Vista as cores e a paixão do carnaval carioca com nossas camisas oficiais licenciadas</p>
         </div>
 
-        <div class="products-grid">
-            <!-- Camisa Beija-Flor -->
-            <div class="product-card" data-school="beija-flor" data-price="89.90">
-                <div class="product-image">
-                    <img data-src="images/products/camisa-beija-flor-frente.jpg"
-                         data-srcset="images/products/camisa-beija-flor-frente.jpg"
-                         alt="Camisa oficial Beija-Flor de Nilópolis enredo 2025 - Roupa carnaval carioca licenciada samba vest"
-                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                         class="responsive-image product-img"
-                         loading="lazy">
-                    <div class="product-overlay">
-                        <button class="btn-quick-view" onclick="openProductModal('beija-flor')" aria-label="Visualizar camisa Beija-Flor">
-                            👁️ Visualizar
-                        </button>
-                        <button class="btn-wishlist" onclick="addToWishlist('beija-flor')" aria-label="Adicionar à lista de desejos">
-                            ❤️
-                        </button>
+        <!-- Carrossel de Produtos e Promoções -->
+        <div class="carousel-container">
+            <div class="carousel-inner">
+                <!-- Card da Promoção das Campeãs -->
+                <div class="carousel-item active">
+                    <div class="product-card promotion-card">
+                        <div class="product-image">
+                            <img data-src="images/banners/promocao-campeas.jpg"
+                                 data-srcset="images/banners/promocao-campeas.jpg"
+                                 alt="Promoção especial camisas das campeãs carnaval carioca 2025 - Desconto samba vest roupas oficiais"
+                                 sizes="100vw"
+                                 class="responsive-image product-img"
+                                 loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Promoção das Campeãs!</h3>
+                            <p class="product-description">2 Camisas por R$ 149,90</p>
+                            <div class="product-price">
+                                <span class="price-old">R$ 239,90</span>
+                                <span class="price-current">R$ 149,90</span>
+                            </div>
+                            <div class="product-actions">
+                                <a href="https://sambavest.com/produto/promocao-das-campeas/" class="btn-buy-now" target="_blank" aria-label="Comprar Promoção das Campeãs agora">
+                                    ⚡ Comprar Agora
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="product-info">
-                    <h3 class="product-name">Camisa Beija-Flor Enredo 2025</h3>
-                    <p class="product-description">Camisa oficial licenciada da escola de samba Beija-Flor de Nilópolis - Carnaval Rio 2025</p>
-                    <div class="product-keywords" style="display: none;">
-                        camisas carnaval, beija-flor nilópolis, roupas carnaval carioca, camisas oficiais licenciadas, samba vest
-                    </div>
-                    <div class="product-price">
-                        <span class="price-current">R$ 89,90</span>
-                        <span class="price-installments">ou 3x de R$ 29,97 sem juros</span>
-                    </div>
-                    <div class="product-actions">
-                        <button class="btn-add-cart" onclick="addToCart('beija-flor', 89.90)" aria-label="Adicionar camisa Beija-Flor ao carrinho">
-                            🛒 Adicionar ao Carrinho
-                        </button>
-                        <button class="btn-buy-now" onclick="buyNow('beija-flor', 89.90)" aria-label="Comprar camisa Beija-Flor agora">
-                            ⚡ Comprar Agora
-                        </button>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Camisa Salgueiro -->
-            <div class="product-card" data-school="salgueiro" data-price="89.90">
-                <div class="product-image">
-                    <img data-src="images/products/camisa-salgueiro-frente.jpg"
-                         data-srcset="images/products/camisa-salgueiro-frente.jpg"
-                         alt="Camisa oficial Acadêmicos do Salgueiro enredo 2025 - Camisas carnaval rio licenciadas samba vest"
-                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                         class="responsive-image product-img"
-                         loading="lazy">
-                    <div class="product-overlay">
-                        <button class="btn-quick-view" onclick="openProductModal('salgueiro')" aria-label="Visualizar camisa Salgueiro">
-                            👁️ Visualizar
-                        </button>
-                        <button class="btn-wishlist" onclick="addToWishlist('salgueiro')" aria-label="Adicionar à lista de desejos">
-                            ❤️
-                        </button>
+                <!-- Camisa Beija-Flor -->
+                <div class="carousel-item">
+                    <div class="product-card" data-school="beija-flor" data-price="89.90">
+                        <div class="product-image">
+                            <img data-src="images/products/camisa-beija-flor-frente.jpg"
+                                 data-srcset="images/products/camisa-beija-flor-frente.jpg"
+                                 alt="Camisa oficial Beija-Flor de Nilópolis enredo 2025 - Roupa carnaval carioca licenciada samba vest"
+                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                 class="responsive-image product-img"
+                                 loading="lazy">
+                            <div class="product-overlay">
+                                <button class="btn-quick-view" onclick="openProductModal(\'beija-flor\')" aria-label="Visualizar camisa Beija-Flor">
+                                    👁️ Visualizar
+                                </button>
+                                <button class="btn-wishlist" onclick="addToWishlist(\'beija-flor\')" aria-label="Adicionar à lista de desejos">
+                                    ❤️
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Camisa Beija-Flor Enredo 2025</h3>
+                            <p class="product-description">Camisa oficial licenciada da escola de samba Beija-Flor de Nilópolis - Carnaval Rio 2025</p>
+                            <div class="product-keywords" style="display: none;">
+                                camisas carnaval, beija-flor nilópolis, roupas carnaval carioca, camisas oficiais licenciadas, samba vest
+                            </div>
+                            <div class="product-price">
+                                <span class="price-current">R$ 89,90</span>
+                                <span class="price-installments">ou 3x de R$ 29,97 sem juros</span>
+                            </div>
+                            <div class="product-actions">
+                                <a href="https://sambavest.com/produto/camisa-beija-flor-enredo-2025/" class="btn-buy-now" target="_blank" aria-label="Comprar camisa Beija-Flor agora">
+                                    ⚡ Comprar Agora
+                                </a>
+                            </div>
+                            <div class="shipping-calc">
+                                <input type="text" placeholder="Calcular Frete (CEP)" class="shipping-input" data-product-id="beija-flor">
+                                <button class="btn-calc-shipping" onclick="calculateShipping(\'beija-flor\')">Calcular</button>
+                                <div class="shipping-result" id="shipping-beija-flor"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="product-info">
-                    <h3 class="product-name">Camisa Salgueiro Enredo 2025</h3>
-                    <p class="product-description">Camisa oficial licenciada da escola de samba Acadêmicos do Salgueiro - Carnaval Carioca 2025</p>
-                    <div class="product-keywords" style="display: none;">
-                        camisas carnaval, salgueiro acadêmicos, roupas carnaval carioca, camisas oficiais licenciadas, samba vest
-                    </div>
-                    <div class="product-price">
-                        <span class="price-current">R$ 89,90</span>
-                        <span class="price-installments">ou 3x de R$ 29,97 sem juros</span>
-                    </div>
-                    <div class="product-actions">
-                        <button class="btn-add-cart" onclick="addToCart('salgueiro', 89.90)" aria-label="Adicionar camisa Salgueiro ao carrinho">
-                            🛒 Adicionar ao Carrinho
-                        </button>
-                        <button class="btn-buy-now" onclick="buyNow('salgueiro', 89.90)" aria-label="Comprar camisa Salgueiro agora">
-                            ⚡ Comprar Agora
-                        </button>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Camisa Viradouro -->
-            <div class="product-card" data-school="viradouro" data-price="89.90">
-                <div class="product-image">
-                    <img data-src="images/products/camisa-viradouro-frente.jpg"
-                         data-srcset="images/products/camisa-viradouro-frente.jpg"
-                         alt="Camisa oficial Unidos do Viradouro enredo 2025 - Camisas carnaval oficiais licenciadas rio samba vest"
-                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                         class="responsive-image product-img"
-                         loading="lazy">
-                    <div class="product-overlay">
-                        <button class="btn-quick-view" onclick="openProductModal('viradouro')" aria-label="Visualizar camisa Viradouro">
-                            👁️ Visualizar
-                        </button>
-                        <button class="btn-wishlist" onclick="addToWishlist('viradouro')" aria-label="Adicionar à lista de desejos">
-                            ❤️
-                        </button>
+                <!-- Camisa Salgueiro -->
+                <div class="carousel-item">
+                    <div class="product-card" data-school="salgueiro" data-price="89.90">
+                        <div class="product-image">
+                            <img data-src="images/products/camisa-salgueiro-frente.jpg"
+                                 data-srcset="images/products/camisa-salgueiro-frente.jpg"
+                                 alt="Camisa oficial Acadêmicos do Salgueiro enredo 2025 - Camisas carnaval rio licenciadas samba vest"
+                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                 class="responsive-image product-img"
+                                 loading="lazy">
+                            <div class="product-overlay">
+                                <button class="btn-quick-view" onclick="openProductModal(\'salgueiro\')" aria-label="Visualizar camisa Salgueiro">
+                                    👁️ Visualizar
+                                </button>
+                                <button class="btn-wishlist" onclick="addToWishlist(\'salgueiro\')" aria-label="Adicionar à lista de desejos">
+                                    ❤️
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Camisa Salgueiro Enredo 2025</h3>
+                            <p class="product-description">Camisa oficial licenciada da escola de samba Acadêmicos do Salgueiro - Carnaval Carioca 2025</p>
+                            <div class="product-keywords" style="display: none;">
+                                camisas carnaval, salgueiro acadêmicos, roupas carnaval carioca, camisas oficiais licenciadas, samba vest
+                            </div>
+                            <div class="product-price">
+                                <span class="price-current">R$ 89,90</span>
+                                <span class="price-installments">ou 3x de R$ 29,97 sem juros</span>
+                            </div>
+                            <div class="product-actions">
+                                <a href="https://sambavest.com/produto/camisa-salgueiro-enredo-2025/" class="btn-buy-now" target="_blank" aria-label="Comprar camisa Salgueiro agora">
+                                    ⚡ Comprar Agora
+                                </a>
+                            </div>
+                            <div class="shipping-calc">
+                                <input type="text" placeholder="Calcular Frete (CEP)" class="shipping-input" data-product-id="salgueiro">
+                                <button class="btn-calc-shipping" onclick="calculateShipping(\'salgueiro\')">Calcular</button>
+                                <div class="shipping-result" id="shipping-salgueiro"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="product-info">
-                    <h3 class="product-name">Camisa Viradouro Enredo 2025</h3>
-                    <p class="product-description">Camisa oficial licenciada da escola de samba Unidos do Viradouro - Carnaval Rio 2025</p>
-                    <div class="product-keywords" style="display: none;">
-                        camisas carnaval, viradouro unidos, roupas carnaval carioca, camisas oficiais licenciadas, samba vest
-                    </div>
-                    <div class="product-price">
-                        <span class="price-current">R$ 89,90</span>
-                        <span class="price-installments">ou 3x de R$ 29,97 sem juros</span>
-                    </div>
-                    <div class="product-actions">
-                        <button class="btn-add-cart" onclick="addToCart('viradouro', 89.90)" aria-label="Adicionar camisa Viradouro ao carrinho">
-                            🛒 Adicionar ao Carrinho
-                        </button>
-                        <button class="btn-buy-now" onclick="buyNow('viradouro', 89.90)" aria-label="Comprar camisa Viradouro agora">
-                            ⚡ Comprar Agora
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Banner Promocional -->
-        <div class="promotional-banner">
-            <img data-src="images/banners/promocao-campeas.jpg"
-                 data-srcset="images/banners/promocao-campeas.jpg"
-                 alt="Promoção especial camisas das campeãs carnaval carioca 2025 - Desconto samba vest roupas oficiais"
-                 sizes="100vw"
-                 class="responsive-image banner-img"
-                 loading="lazy">
-            <div class="banner-content">
-                <h3>Promoção Especial das Campeãs!</h3>
-                <p>Desconto especial nas camisas das escolas campeãs do carnaval carioca</p>
-                <button class="btn-banner" onclick="scrollToProducts()" aria-label="Ver ofertas especiais">
-                    Ver Ofertas
-                </button>
+                <!-- Camisa Viradouro -->
+                <div class="carousel-item">
+                    <div class="product-card" data-school="viradouro" data-price="89.90">
+                        <div class="product-image">
+                            <img data-src="images/products/camisa-viradouro-frente.jpg"
+                                 data-srcset="images/products/camisa-viradouro-frente.jpg"
+                                 alt="Camisa oficial Unidos do Viradouro enredo 2025 - Camisas carnaval oficiais licenciadas rio samba vest"
+                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                 class="responsive-image product-img"
+                                 loading="lazy">
+                            <div class="product-overlay">
+                                <button class="btn-quick-view" onclick="openProductModal(\'viradouro\')" aria-label="Visualizar camisa Viradouro">
+                                    👁️ Visualizar
+                                </button>
+                                <button class="btn-wishlist" onclick="addToWishlist(\'viradouro\')" aria-label="Adicionar à lista de desejos">
+                                    ❤️
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Camisa Viradouro Enredo 2025</h3>
+                            <p class="product-description">Camisa oficial licenciada da escola de samba Unidos do Viradouro - Carnaval Rio 2025</p>
+                            <div class="product-keywords" style="display: none;">
+                                camisas carnaval, viradouro unidos, roupas carnaval carioca, camisas oficiais licenciadas, samba vest
+                            </div>
+                            <div class="product-price">
+                                <span class="price-current">R$ 89,90</span>
+                                <span class="price-installments">ou 3x de R$ 29,97 sem juros</span>
+                            </div>
+                            <div class="product-actions">
+                                <a href="https://sambavest.com/produto/camisa-viradouro-enredo-2025/" class="btn-buy-now" target="_blank" aria-label="Comprar camisa Viradouro agora">
+                                    ⚡ Comprar Agora
+                                </a>
+                            </div>
+                            <div class="shipping-calc">
+                                <input type="text" placeholder="Calcular Frete (CEP)" class="shipping-input" data-product-id="viradouro">
+                                <button class="btn-calc-shipping" onclick="calculateShipping(\'viradouro\')">Calcular</button>
+                                <div class="shipping-result" id="shipping-viradouro"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card de Direcionamento para WooCommerce -->
+                <div class="carousel-item">
+                    <div class="product-card woocommerce-card">
+                        <div class="product-image">
+                            <img data-src="images/banners/woocommerce-shop.jpg"
+                                 data-srcset="images/banners/woocommerce-shop.jpg"
+                                 alt="Visite nossa loja oficial no WooCommerce - Samba Vest"
+                                 sizes="100vw"
+                                 class="responsive-image product-img"
+                                 loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Visite Nossa Loja Oficial!</h3>
+                            <p class="product-description">Explore todos os produtos e promoções exclusivas em nossa loja WooCommerce.</p>
+                            <div class="product-actions">
+                                <a href="https://sambavest.com/shop/" class="btn-buy-now" target="_blank" aria-label="Ir para a loja oficial WooCommerce">
+                                    🛒 Ir para a Loja
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <button class="carousel-control prev" onclick="moveCarousel(-1)">❮</button>
+            <button class="carousel-control next" onclick="moveCarousel(1)">❯</button>
         </div>
 
         <!-- Filtros e Busca -->
@@ -179,11 +229,29 @@
             "@type": "ItemList",
             "name": "Camisas Oficiais Carnaval Carioca",
             "description": "Coleção de camisas oficiais licenciadas das escolas de samba do Rio de Janeiro",
-            "numberOfItems": 3,
+            "numberOfItems": 4,
             "itemListElement": [
                 {
                     "@type": "Product",
                     "position": 1,
+                    "name": "Promoção das Campeãs",
+                    "description": "2 Camisas das escolas campeãs por um preço especial",
+                    "image": "images/banners/promocao-campeas.jpg",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "149.90",
+                        "priceCurrency": "BRL",
+                        "availability": "https://schema.org/InStock"
+                    },
+                    "brand": {
+                        "@type": "Brand",
+                        "name": "Samba Vest"
+                    },
+                    "category": "Promoções"
+                },
+                {
+                    "@type": "Product",
+                    "position": 2,
                     "name": "Camisa Beija-Flor Enredo 2025",
                     "description": "Camisa oficial licenciada da escola de samba Beija-Flor de Nilópolis",
                     "image": "images/products/camisa-beija-flor-frente.jpg",
@@ -201,7 +269,7 @@
                 },
                 {
                     "@type": "Product",
-                    "position": 2,
+                    "position": 3,
                     "name": "Camisa Salgueiro Enredo 2025",
                     "description": "Camisa oficial licenciada da escola de samba Acadêmicos do Salgueiro",
                     "image": "images/products/camisa-salgueiro-frente.jpg",
@@ -219,7 +287,7 @@
                 },
                 {
                     "@type": "Product",
-                    "position": 3,
+                    "position": 4,
                     "name": "Camisa Viradouro Enredo 2025",
                     "description": "Camisa oficial licenciada da escola de samba Unidos do Viradouro",
                     "image": "images/products/camisa-viradouro-frente.jpg",
@@ -240,4 +308,5 @@
         </script>
     </div>
 </section>
+
 

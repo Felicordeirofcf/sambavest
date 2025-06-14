@@ -52,6 +52,7 @@
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- Pixels de Marketing e Analytics -->
     <!-- Facebook Pixel (Meta Ads) - ESSENCIAL PARA CONVERSÕES -->
@@ -59,15 +60,15 @@
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version=\'2.0\';
         n.queue=[];t=b.createElement(e);t.async=!0;
         t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
+        s.parentNode.insertBefore(t,s)}(window, document,\'script\',
+        \'https://connect.facebook.net/en_US/fbevents.js\');
         
         // SUBSTITUA PELO SEU PIXEL ID DO FACEBOOK
-        fbq('init', 'YOUR_FACEBOOK_PIXEL_ID'); 
-        fbq('track', 'PageView');
+        fbq(\'init\', \'YOUR_FACEBOOK_PIXEL_ID\'); 
+        fbq(\'track\', \'PageView\');
     </script>
     <noscript><img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=1"
@@ -79,9 +80,9 @@
             w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
             
             // SUBSTITUA PELO SEU PIXEL ID DO TIKTOK
-            ttq.load('YOUR_TIKTOK_PIXEL_ID');
+            ttq.load(\'YOUR_TIKTOK_PIXEL_ID\');
             ttq.page();
-        }(window, document, 'ttq');
+        }(window, document, \'ttq\');
     </script>
 
     <!-- Google Analytics 4 - ANÁLISE DE COMPORTAMENTO -->
@@ -89,10 +90,10 @@
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+        gtag(\'js\', new Date());
         
         // SUBSTITUA PELO SEU ID DO GOOGLE ANALYTICS
-        gtag('config', 'GA_MEASUREMENT_ID');
+        gtag(\'config\', \'GA_MEASUREMENT_ID\');
     </script>
 
     <!-- Google Ads Conversion Tracking - CONVERSÕES GOOGLE ADS -->
@@ -100,10 +101,10 @@
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+        gtag(\'js\', new Date());
         
         // SUBSTITUA PELO SEU ID DE CONVERSÃO DO GOOGLE ADS
-        gtag('config', 'AW-CONVERSION_ID');
+        gtag(\'config\', \'AW-CONVERSION_ID\');
     </script>
 
     <!-- Structured Data para SEO e Google Shopping -->
@@ -141,7 +142,7 @@
             
             <ul class="nav-menu">
                 <li><a href="#products" class="nav-link">PRODUTOS</a></li>
-                <li><a href="#about" class="nav-link">SOBRE NÓS</a></li>
+                <li><a href="/sobre" class="nav-link">SOBRE NÓS</a></li>
                 <li><a href="#contact" class="nav-link">CONTATO</a></li>
             </ul>
             
@@ -175,124 +176,10 @@
         </section>
 
         <!-- Products Section -->
-        <section id="products" class="products-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Camisas Oficiais das Escolas de Samba</h2>
-                    <p>Vista as cores e a paixão do carnaval carioca com nossas camisas oficiais licenciadas</p>
-                </div>
+        <?php include \'components/products-optimized.html\'; ?>
 
-                <div class="products-grid">
-                    <!-- Camisa Beija-Flor -->
-                    <div class="product-card" data-school="beija-flor" data-price="89.90">
-                        <div class="product-image">
-                            <img data-src="images/products/camisa-beija-flor-frente.jpg"
-                                 data-srcset="images/products/camisa-beija-flor-frente.jpg"
-                                 alt="Camisa oficial Beija-Flor de Nilópolis enredo 2025 - Roupa carnaval carioca licenciada samba vest"
-                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                 class="responsive-image product-img"
-                                 loading="lazy">
-                            <div class="product-overlay">
-                                <button class="btn-quick-view" onclick="openProductModal('beija-flor')" aria-label="Visualizar camisa Beija-Flor">
-                                    👁️ Visualizar
-                                </button>
-                                <button class="btn-wishlist" onclick="addToWishlist('beija-flor')" aria-label="Adicionar à lista de desejos">
-                                    ❤️
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Camisa Beija-Flor Enredo 2025</h3>
-                            <p class="product-description">Camisa oficial licenciada da escola de samba Beija-Flor de Nilópolis - Carnaval Rio 2025</p>
-                            <div class="product-price">
-                                <span class="price-current">R$ 89,90</span>
-                                <span class="price-installments">ou 3x de R$ 29,97 sem juros</span>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn-add-cart" onclick="addToCart('beija-flor', 89.90)" aria-label="Adicionar camisa Beija-Flor ao carrinho">
-                                    🛒 Adicionar ao Carrinho
-                                </button>
-                                <button class="btn-buy-now" onclick="buyNow('beija-flor', 89.90)" aria-label="Comprar camisa Beija-Flor agora">
-                                    ⚡ Comprar Agora
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Camisa Salgueiro -->
-                    <div class="product-card" data-school="salgueiro" data-price="89.90">
-                        <div class="product-image">
-                            <img data-src="images/products/camisa-salgueiro-frente.jpg"
-                                 data-srcset="images/products/camisa-salgueiro-frente.jpg"
-                                 alt="Camisa oficial Acadêmicos do Salgueiro enredo 2025 - Camisas carnaval rio licenciadas samba vest"
-                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                 class="responsive-image product-img"
-                                 loading="lazy">
-                            <div class="product-overlay">
-                                <button class="btn-quick-view" onclick="openProductModal('salgueiro')" aria-label="Visualizar camisa Salgueiro">
-                                    👁️ Visualizar
-                                </button>
-                                <button class="btn-wishlist" onclick="addToWishlist('salgueiro')" aria-label="Adicionar à lista de desejos">
-                                    ❤️
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Camisa Salgueiro Enredo 2025</h3>
-                            <p class="product-description">Camisa oficial licenciada da escola de samba Acadêmicos do Salgueiro - Carnaval Carioca 2025</p>
-                            <div class="product-price">
-                                <span class="price-current">R$ 89,90</span>
-                                <span class="price-installments">ou 3x de R$ 29,97 sem juros</span>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn-add-cart" onclick="addToCart('salgueiro', 89.90)" aria-label="Adicionar camisa Salgueiro ao carrinho">
-                                    🛒 Adicionar ao Carrinho
-                                </button>
-                                <button class="btn-buy-now" onclick="buyNow('salgueiro', 89.90)" aria-label="Comprar camisa Salgueiro agora">
-                                    ⚡ Comprar Agora
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Camisa Viradouro -->
-                    <div class="product-card" data-school="viradouro" data-price="89.90">
-                        <div class="product-image">
-                            <img data-src="images/products/camisa-viradouro-frente.jpg"
-                                 data-srcset="images/products/camisa-viradouro-frente.jpg"
-                                 alt="Camisa oficial Unidos do Viradouro enredo 2025 - Camisas carnaval oficiais licenciadas rio samba vest"
-                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                 class="responsive-image product-img"
-                                 loading="lazy">
-                            <div class="product-overlay">
-                                <button class="btn-quick-view" onclick="openProductModal('viradouro')" aria-label="Visualizar camisa Viradouro">
-                                    👁️ Visualizar
-                                </button>
-                                <button class="btn-wishlist" onclick="addToWishlist('viradouro')" aria-label="Adicionar à lista de desejos">
-                                    ❤️
-                                </button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Camisa Viradouro Enredo 2025</h3>
-                            <p class="product-description">Camisa oficial licenciada da escola de samba Unidos do Viradouro - Carnaval Rio 2025</p>
-                            <div class="product-price">
-                                <span class="price-current">R$ 89,90</span>
-                                <span class="price-installments">ou 3x de R$ 29,97 sem juros</span>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn-add-cart" onclick="addToCart('viradouro', 89.90)" aria-label="Adicionar camisa Viradouro ao carrinho">
-                                    🛒 Adicionar ao Carrinho
-                                </button>
-                                <button class="btn-buy-now" onclick="buyNow('viradouro', 89.90)" aria-label="Comprar camisa Viradouro agora">
-                                    ⚡ Comprar Agora
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Instagram Section -->
+        <?php include \'components/instagram-section.html\'; ?>
 
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
@@ -402,6 +289,18 @@
     <script src="js/products.js"></script>
     <script src="js/contact.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- Popup de Promoção -->
+    <div id="promo-popup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <img src="images/banners/promocao-campeas.jpg" alt="Promoção das Campeãs" class="popup-image">
+            <h2>PROMOÇÃO DAS CAMPEÃS!</h2>
+            <p>Aproveite 2 camisas por apenas R$ 149,90!</p>
+            <a href="https://sambavest.com/produto/promocao-das-campeas/" class="btn-popup-action" target="_blank">Aproveitar Agora!</a>
+        </div>
+    </div>
 </body>
 </html>
+
 

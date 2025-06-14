@@ -256,3 +256,31 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+
+
+// Popup de Promoção
+document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("promo-popup");
+    const closeBtn = popup.querySelector(".close-popup");
+    const hasSeenPopup = sessionStorage.getItem("hasSeenPromoPopup");
+
+    if (!hasSeenPopup) {
+        setTimeout(() => {
+            popup.classList.add("active");
+        }, 1000); // Atraso de 1 segundo para o pop-up aparecer
+    }
+
+    closeBtn.addEventListener("click", () => {
+        popup.classList.remove("active");
+        sessionStorage.setItem("hasSeenPromoPopup", "true");
+    });
+
+    popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+            popup.classList.remove("active");
+            sessionStorage.setItem("hasSeenPromoPopup", "true");
+        }
+    });
+});
+
+

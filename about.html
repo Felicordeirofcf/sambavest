@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre a Samba Vest - Camisas Oficiais do Carnaval Carioca</title>
+    <meta name="description" content="Conheça a história e a paixão da Samba Vest por trás das camisas oficiais e licenciadas do carnaval carioca.">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="logo">
+                <img data-src="images/logos/logo.jpg"
+                     data-srcset="images/logos/logo.jpg"
+                     alt="Samba Vest - Camisas oficiais e licenciadas do carnaval carioca Rio de Janeiro"
+                     sizes="(max-width: 768px) 120px, 150px"
+                     class="responsive-image logo-img"
+                     loading="eager">
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">HOME</a></li>
+                <li><a href="/products" class="nav-link">PRODUTOS</a></li>
+                <li><a href="/about" class="nav-link">SOBRE NÓS</a></li>
+                <li><a href="/contact" class="nav-link">CONTATO</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="nav-icon" onclick="openSearch()" aria-label="Abrir busca de produtos">🔍</button>
+                <button class="nav-icon" onclick="openAccount()" aria-label="Acessar conta">👤</button>
+                <button class="nav-icon" onclick="toggleWishlist()" aria-label="Lista de desejos">❤️</button>
+                <button class="cart-icon" onclick="toggleCart()" aria-label="Carrinho de compras">
+                    🛒
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu mobile">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero about-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Sobre a SambaVest</h1>
+                    <p>Vista sua paixão pelo samba com originalidade e orgulho</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section content-section">
+            <div class="container">
+                <p>A SambaVest nasceu da paixão pelo Carnaval carioca e da vontade de aproximar os amantes do samba às suas escolas de samba do coração.</p>
+                <p>Somos especializados na venda de camisas oficiais e licenciadas das mais renomadas escolas de samba do Rio de Janeiro, como Mangueira, Beija-Flor, Portela, Salgueiro, entre outras. Cada peça reflete a autenticidade, qualidade e a história de cada agremiação.</p>
+
+                <h2>Produtos oficiais, com alma e tradição</h2>
+                <p>Nosso compromisso é celebrar a cultura do samba através de produtos exclusivos que representam a energia contagiante e a tradição do nosso Carnaval. Trabalhamos lado a lado com as escolas para garantir que cada camisa conte um pouco da história de seus enredos, cores e raízes.</p>
+
+                <h2>Para quem ama o samba de verdade</h2>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">✅</span>
+                        <h4>Camisas licenciadas diretamente com as escolas</h4>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✅</span>
+                        <h4>Designs únicos inspirados nos enredos de cada ano</h4>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✅</span>
+                        <h4>Entrega para todo o Brasil</h4>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✅</span>
+                        <h4>Atendimento humanizado</h4>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✅</span>
+                        <h4>Política de troca e devolução clara</h4>
+                    </div>
+                </div>
+                <p>Queremos que você vista sua paixão com orgulho, sabendo que está adquirindo um produto original que apoia diretamente o samba e o Carnaval brasileiro.</p>
+
+                <div class="instagram-cta">
+                    <h3>Vista o samba. Viva a cultura. Seja SambaVest.</h3>
+                    <p>Acompanhe nosso dia a dia e novidades no Instagram da SambaVest e fique por dentro das novas coleções e parcerias com as escolas de samba.</p>
+                    <a href="https://www.instagram.com/sambavest" target="_blank" class="btn-instagram">Seguir no Instagram</a>
+                </div>
+
+                <p class="tagline">SambaVest: onde o amor pelo samba vira camisa.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Samba Vest</h3>
+                    <p>Camisas oficiais e licenciadas do carnaval carioca</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="WhatsApp">📱</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Produtos</h4>
+                    <ul>
+                        <li><a href="#products">Camisas Carnaval</a></li>
+                        <li><a href="#products">Escolas de Samba</a></li>
+                        <li><a href="#products">Lançamentos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Atendimento</h4>
+                    <ul>
+                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="/about">Sobre Nós</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Samba Vest. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/image-optimization-config.js"></script>
+    <script src="js/responsive-images.js"></script>
+    <script src="js/marketing-tracker.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

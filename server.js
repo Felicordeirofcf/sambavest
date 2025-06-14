@@ -70,8 +70,8 @@ app.get('/', (req, res) => {
 });
 
 // Rota para página sobre
-app.get('/sobre', (req, res) => {
-    res.sendFile(path.join(__dirname, 'about.html'));
+app.get("/sobre", (req, res) => {
+    res.sendFile(path.join(__dirname, "about.html"));
 });
 
 // API para produtos (para futuras funcionalidades)
