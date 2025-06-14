@@ -50,6 +50,7 @@
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/featured-products.css">
+    <link rel="stylesheet" href="css/instagram-section.css">
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/contact.css">
@@ -149,14 +150,14 @@
             </ul>
             
             <div class="nav-actions">
-                <button class="nav-icon" onclick="openSearch()" aria-label="Abrir busca de produtos">🔍</button>
-                <button class="nav-icon" onclick="openAccount()" aria-label="Acessar conta">👤</button>
-                <button class="nav-icon" onclick="toggleWishlist()" aria-label="Lista de desejos">❤️</button>
-                <button class="cart-icon" onclick="toggleCart()" aria-label="Carrinho de compras">
+                <button class="nav-icon" data-action="search" aria-label="Abrir busca de produtos">🔍</button>
+                <button class="nav-icon" data-action="account" aria-label="Acessar conta">👤</button>
+                <button class="nav-icon" data-action="wishlist" aria-label="Lista de desejos">❤️</button>
+                <button class="cart-icon" data-action="cart" aria-label="Carrinho de compras">
                     🛒
                     <span class="cart-count" id="cart-count">0</span>
                 </button>
-                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu mobile">☰</button>
+                <button class="mobile-menu-toggle" data-action="mobile-menu" aria-label="Menu mobile">☰</button>
             </div>
         </nav>
     </header>
@@ -178,10 +179,10 @@
                             </div>
                         </div>
                         
-                        <!-- Slide 2: -->
+                        <!-- Slide 2: Promoção das Campeãs -->
                         <div class="carousel-slide" style="background-image: url(images/products/promocao-frente.jpg)">
                             <div class="slide-content">
-                                <h2></h2>
+                                <h2>Promoção das Campeãs</h2>
                                 <p>2 camisas por apenas R$ 149,90! Aproveite essa oferta especial das escolas campeãs.</p>
                                 <a href="https://sambavest.com/produto/promocao-das-campeas/" class="slide-cta" target="_blank" rel="noopener">
                                     Aproveitar Oferta
@@ -330,6 +331,77 @@
 
                         <a href="https://sambavest.com/shop/" target="_blank" class="samba-btn">
                             🛍️ Ver Produtos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram & Reels Section -->
+        <section class="instagram-section">
+            <div class="container">
+                <h2 class="section-title">📸 Siga-nos no Instagram</h2>
+                <p class="section-subtitle">Acompanhe nossos looks, novidades e promoções exclusivas!</p>
+                
+                <div class="instagram-grid">
+                    <!-- Card 1 - Instagram Principal -->
+                    <div class="instagram-card main-card">
+                        <div class="card-icon">📸</div>
+                        <h3>Acompanhe no Instagram</h3>
+                        <p class="instagram-handle">@sambavest</p>
+                        <p class="card-description">Fique por dentro das novidades, looks e promoções exclusivas!</p>
+                        <a href="https://instagram.com/sambavest" target="_blank" rel="noopener" class="instagram-btn">
+                            Seguir no Instagram
+                        </a>
+                    </div>
+
+                    <!-- Card 2 - Destaque da Semana -->
+                    <div class="instagram-card reel-card">
+                        <div class="card-icon">🎬</div>
+                        <h3>Destaque da Semana</h3>
+                        <p class="card-description">Confira o look que está bombando!</p>
+                        <a href="https://www.instagram.com/reel/DK0MwOkxJZ5/?igsh=ZHdvZXFoeW8yNzF2" target="_blank" rel="noopener" class="instagram-btn">
+                            Ver Reel
+                        </a>
+                    </div>
+
+                    <!-- Card 3 - Look do Dia -->
+                    <div class="instagram-card reel-card">
+                        <div class="card-icon">✨</div>
+                        <h3>Look do Dia</h3>
+                        <p class="card-description">Inspiração diária para arrasar no visual!</p>
+                        <a href="https://www.instagram.com/reel/DKuaAL5R9ye/?igsh=cHVmeWMxbTJhbmI=" target="_blank" rel="noopener" class="instagram-btn">
+                            Ver Reel
+                        </a>
+                    </div>
+
+                    <!-- Card 4 - Estilo SambaVest -->
+                    <div class="instagram-card reel-card">
+                        <div class="card-icon">🔥</div>
+                        <h3>Estilo SambaVest</h3>
+                        <p class="card-description">O melhor do nosso estilo em movimento!</p>
+                        <a href="https://www.instagram.com/reel/DKdBpRHJ20O/?igsh=cHlneGdkOW90Mm14" target="_blank" rel="noopener" class="instagram-btn">
+                            Ver Reel
+                        </a>
+                    </div>
+
+                    <!-- Card 5 - Looks em Oferta -->
+                    <div class="instagram-card reel-card">
+                        <div class="card-icon">💰</div>
+                        <h3>Looks em Oferta</h3>
+                        <p class="card-description">Promoções imperdíveis que você precisa ver!</p>
+                        <a href="https://www.instagram.com/reel/DKQJj2XJknc/?igsh=d3J2czNqYzF6NWg2" target="_blank" rel="noopener" class="instagram-btn">
+                            Ver Reel
+                        </a>
+                    </div>
+
+                    <!-- Card 6 - Samba é Moda -->
+                    <div class="instagram-card reel-card">
+                        <div class="card-icon">🎭</div>
+                        <h3>Samba é Moda</h3>
+                        <p class="card-description">A essência do carnaval em cada peça!</p>
+                        <a href="https://www.instagram.com/reel/DJ-JOo5JkDK/?igsh=MWFjYzN2N3UwdnNyOA==" target="_blank" rel="noopener" class="instagram-btn">
+                            Ver Reel
                         </a>
                     </div>
                 </div>
