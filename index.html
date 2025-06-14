@@ -49,6 +49,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/featured-products.css">
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/contact.css">
@@ -142,9 +143,9 @@
             </a>
             
             <ul class="nav-menu">
-                <li><a href="#products" class="nav-link">PRODUTOS</a></li>
+                <li><a href="/" class="nav-link">INÍCIO</a></li>
+                <li><a href="https://sambavest.com/shop/" class="nav-link" target="_blank">PRODUTOS</a></li>
                 <li><a href="/sobre" class="nav-link">SOBRE NÓS</a></li>
-                <li><a href="#contact" class="nav-link">CONTATO</a></li>
             </ul>
             
             <div class="nav-actions">
@@ -200,6 +201,109 @@
                     </div>
                 </div>
         </section>
+
+        <!-- Featured Products Section -->
+        <section class="featured-products-section">
+            <div class="container">
+                <h2 class="section-title">Produtos em Destaque</h2>
+                <div class="products-grid">
+                    <!-- Card 1 - Camisa Salgueiro -->
+                    <div class="product-card">
+                        <div class="product-carousel">
+                            <div class="product-images">
+                                <div class="product-image active">
+                                    <img src="images/products/camisa-salgueiro-frente.jpg" alt="Camisa Salgueiro Enredo 2025 - Frente" loading="lazy">
+                                </div>
+                                <div class="product-image">
+                                    <img src="images/products/salgueiro-verso.jpg" alt="Camisa Salgueiro Enredo 2025 - Verso" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="carousel-dots">
+                                <button class="dot active" onclick="showImage(this, 0)"></button>
+                                <button class="dot" onclick="showImage(this, 1)"></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Camisa Salgueiro Enredo 2025</h3>
+                            <div class="shipping-calculator">
+                                <input type="text" placeholder="Digite seu CEP" class="cep-input" maxlength="9">
+                                <button class="calc-shipping-btn">Calcular Frete</button>
+                            </div>
+                            <a href="https://sambavest.com/produto/camisa-salgueiro-enredo-2025/" class="product-btn" target="_blank">
+                                Incluir no Carrinho
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 - Camisa Viradouro -->
+                    <div class="product-card">
+                        <div class="product-carousel">
+                            <div class="product-images">
+                                <div class="product-image active">
+                                    <img src="images/products/camisa-viradouro-frente.jpg" alt="Camisa Viradouro Enredo 2025 - Frente" loading="lazy">
+                                </div>
+                                <div class="product-image">
+                                    <img src="images/products/viradouro-verso.jpg" alt="Camisa Viradouro Enredo 2025 - Verso" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="carousel-dots">
+                                <button class="dot active" onclick="showImage(this, 0)"></button>
+                                <button class="dot" onclick="showImage(this, 1)"></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Camisa Viradouro Enredo 2025</h3>
+                            <div class="shipping-calculator">
+                                <input type="text" placeholder="Digite seu CEP" class="cep-input" maxlength="9">
+                                <button class="calc-shipping-btn">Calcular Frete</button>
+                            </div>
+                            <a href="https://sambavest.com/produto/camisa-viradouro-enredo-2025/" class="product-btn" target="_blank">
+                                Incluir no Carrinho
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 - Promoção das Campeãs -->
+                    <div class="product-card promo-card">
+                        <div class="product-carousel">
+                            <div class="product-images">
+                                <div class="product-image active">
+                                    <img src="images/products/promocao-frente.jpg" alt="Promoção das Campeãs - Frente" loading="lazy">
+                                </div>
+                                <div class="product-image">
+                                    <img src="images/products/promocao-verso.jpg" alt="Promoção das Campeãs - Verso" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="carousel-dots">
+                                <button class="dot active" onclick="showImage(this, 0)"></button>
+                                <button class="dot" onclick="showImage(this, 1)"></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Promoção das Campeãs</h3>
+                            <p class="promo-text">2 camisas por apenas R$ 149,90!</p>
+                            <a href="https://sambavest.com/produto/promocao-das-campeas/" class="product-btn promo-btn" target="_blank">
+                                Aproveitar Oferta
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 - Loja Oficial -->
+                    <div class="product-card store-card">
+                        <div class="store-content">
+                            <div class="store-icon">🏪</div>
+                            <h3>Loja Oficial</h3>
+                            <p>Confira todos os modelos disponíveis!</p>
+                            <p class="store-subtitle">Camisas oficiais de todas as escolas de samba</p>
+                            <a href="https://sambavest.com/shop/" class="product-btn store-btn" target="_blank">
+                                Ir para Loja Oficial
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- Products Section -->
         <?php include \'components/products-optimized.html\'; ?>
 
@@ -311,6 +415,7 @@
     <script src="js/responsive-images.js"></script>
     <script src="js/marketing-tracker.js"></script>
     <script src="js/carousel.js"></script>
+    <script src="js/featured-products.js"></script>
     <script src="js/header.js"></script>
     <script src="js/products.js"></script>
     <script src="js/contact.js"></script>
