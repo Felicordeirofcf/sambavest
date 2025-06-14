@@ -117,3 +117,36 @@
     }
 }
 
+
+/* About Logo Section */
+.about-logo-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+.about-logo {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-logo:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .about-logo {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-logo {
+        max-width: 250px;
+    }
+}
+
