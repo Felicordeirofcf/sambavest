@@ -80,7 +80,7 @@
 .product-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Alterado de 'cover' para 'contain' */
     object-position: center;
 }
 
@@ -362,7 +362,21 @@
     }
     
     .product-info h3 {
-/* Promo button special styling */
+/* Card 3 - Promoção das Campeãs - Imagem única */
+.product-image-single {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.product-image-single img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background: #f8f9fa;
+}
 .promo-btn {
     background: linear-gradient(135deg, #ff6b35, #f7931e);
     color: white;

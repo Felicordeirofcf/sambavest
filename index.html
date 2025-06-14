@@ -180,7 +180,7 @@
                         </div>
                         
                         <!-- Slide 2: Promoção das Campeãs -->
-                        <div class="carousel-slide" style="background-image: url(images/products/promocao-frente.jpg)">
+                        <div class="carousel-slide" style="background-image: url(images/products/promo.jpg)">
                             <div class="slide-content">
                                 <h2>Promoção das Campeãs</h2>
                                 <p>2 camisas por apenas R$ 149,90! Aproveite essa oferta especial das escolas campeãs.</p>
@@ -294,19 +294,8 @@
 
                     <!-- Card 3 - Promoção das Campeãs -->
                     <div class="product-card promo-card">
-                        <div class="product-carousel">
-                            <div class="product-images">
-                                <div class="product-image active">
-                                    <img src="images/products/promocao-frente.jpg" alt="Promoção das Campeãs - Frente" loading="lazy">
-                                </div>
-                                <div class="product-image">
-                                    <img src="images/products/camisa-beija-flor-frente.jpg" alt="Promoção das Campeãs - Verso" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="carousel-dots">
-                                <button class="dot active" onclick="showImage(this, 0)"></button>
-                                <button class="dot" onclick="showImage(this, 1)"></button>
-                            </div>
+                        <div class="product-image-single">
+                            <img src="images/products/promo.jpg" alt="Promoção das Campeãs" loading="lazy">
                         </div>
                         <div class="product-info">
                             <h3>Promoção das Campeãs</h3>
@@ -337,69 +326,240 @@
             </div>
         </section>
 
-        <!-- Instagram & Reels Section -->
+          <!-- Instagram & Reels Section -->
         <section class="instagram-section">
             <div class="container">
-                <h2 class="section-title">📸 Siga-nos no Instagram</h2>
-                <p class="section-subtitle">Acompanhe nossos looks, novidades e promoções exclusivas!</p>
+                <h2 class="section-title">Veja nosso Instagram</h2>
+                <p class="section-subtitle">Acompanhe as novidades, bastidores e muito mais no nosso Instagram oficial</p>
                 
                 <div class="instagram-grid">
                     <!-- Card 1 - Instagram Principal -->
                     <div class="instagram-card main-card">
-                        <div class="card-icon">📸</div>
-                        <h3>Acompanhe no Instagram</h3>
-                        <p class="instagram-handle">@sambavest</p>
-                        <p class="card-description">Fique por dentro das novidades, looks e promoções exclusivas!</p>
-                        <a href="https://instagram.com/sambavest" target="_blank" rel="noopener" class="instagram-btn">
-                            Seguir no Instagram
-                        </a>
+                        <div class="instagram-header">
+                            <div class="profile-info">
+                                <img src="images/logos/logo.jpg" alt="SambaVest" class="profile-pic">
+                                <div class="profile-details">
+                                    <h4>sambavest</h4>
+                                    <span>Acompanhe</span>
+                                </div>
+                            </div>
+                            <button class="follow-btn">Ver perfil</button>
+                        </div>
+                        <div class="instagram-content">
+                            <div class="video-placeholder">
+                                <div class="play-icon">▶</div>
+                                <p>📸 Acompanhe no Instagram</p>
+                                <span>@sambavest</span>
+                            </div>
+                        </div>
+                        <div class="instagram-actions">
+                            <div class="action-buttons">
+                                <button>♡</button>
+                                <button>💬</button>
+                                <button>📤</button>
+                            </div>
+                            <button class="bookmark">🔖</button>
+                        </div>
+                        <div class="instagram-footer">
+                            <p>Adicione um comentário...</p>
+                            <button class="instagram-btn">
+                                <a href="https://instagram.com/sambavest" target="_blank">Seguir no Instagram</a>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Card 2 - Destaque da Semana -->
-                    <div class="instagram-card reel-card">
-                        <div class="card-icon">🎬</div>
-                        <h3>Destaque da Semana</h3>
-                        <p class="card-description">Confira o look que está bombando!</p>
-                        <a href="https://www.instagram.com/reel/DK0MwOkxJZ5/?igsh=ZHdvZXFoeW8yNzF2" target="_blank" rel="noopener" class="instagram-btn">
-                            Ver Reel
-                        </a>
+                    <div class="instagram-card">
+                        <div class="instagram-header">
+                            <div class="profile-info">
+                                <img src="images/logos/logo.jpg" alt="SambaVest" class="profile-pic">
+                                <div class="profile-details">
+                                    <h4>sambavest</h4>
+                                    <span>Destaque da Semana</span>
+                                </div>
+                            </div>
+                            <button class="follow-btn">Ver perfil</button>
+                        </div>
+                        <div class="instagram-content">
+                            <iframe 
+                                src="https://www.instagram.com/reel/DK0MwOkxJZ5/embed" 
+                                width="100%" 
+                                height="400" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                allowtransparency="true">
+                            </iframe>
+                        </div>
+                        <div class="instagram-actions">
+                            <div class="action-buttons">
+                                <button>♡</button>
+                                <button>💬</button>
+                                <button>📤</button>
+                            </div>
+                            <button class="bookmark">🔖</button>
+                        </div>
+                        <div class="instagram-footer">
+                            <p>Ver mais no Instagram</p>
+                            <button class="instagram-btn">
+                                <a href="https://www.instagram.com/reel/DK0MwOkxJZ5/?igsh=ZHdvZXFoeW8yNzF2" target="_blank">Ver Reel</a>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Card 3 - Look do Dia -->
-                    <div class="instagram-card reel-card">
-                        <div class="card-icon">✨</div>
-                        <h3>Look do Dia</h3>
-                        <p class="card-description">Inspiração diária para arrasar no visual!</p>
-                        <a href="https://www.instagram.com/reel/DKuaAL5R9ye/?igsh=cHVmeWMxbTJhbmI=" target="_blank" rel="noopener" class="instagram-btn">
-                            Ver Reel
-                        </a>
+                    <div class="instagram-card">
+                        <div class="instagram-header">
+                            <div class="profile-info">
+                                <img src="images/logos/logo.jpg" alt="SambaVest" class="profile-pic">
+                                <div class="profile-details">
+                                    <h4>sambavest</h4>
+                                    <span>Look do Dia</span>
+                                </div>
+                            </div>
+                            <button class="follow-btn">Ver perfil</button>
+                        </div>
+                        <div class="instagram-content">
+                            <iframe 
+                                src="https://www.instagram.com/reel/DKuaAL5R9ye/embed" 
+                                width="100%" 
+                                height="400" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                allowtransparency="true">
+                            </iframe>
+                        </div>
+                        <div class="instagram-actions">
+                            <div class="action-buttons">
+                                <button>♡</button>
+                                <button>💬</button>
+                                <button>📤</button>
+                            </div>
+                            <button class="bookmark">🔖</button>
+                        </div>
+                        <div class="instagram-footer">
+                            <p>Adicione um comentário...</p>
+                            <button class="instagram-btn">
+                                <a href="https://www.instagram.com/reel/DKuaAL5R9ye/?igsh=cHVmeWMxbTJhbmI=" target="_blank">Ver Reel</a>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Card 4 - Estilo SambaVest -->
-                    <div class="instagram-card reel-card">
-                        <div class="card-icon">🔥</div>
-                        <h3>Estilo SambaVest</h3>
-                        <p class="card-description">O melhor do nosso estilo em movimento!</p>
-                        <a href="https://www.instagram.com/reel/DKdBpRHJ20O/?igsh=cHlneGdkOW90Mm14" target="_blank" rel="noopener" class="instagram-btn">
-                            Ver Reel
-                        </a>
+                    <div class="instagram-card">
+                        <div class="instagram-header">
+                            <div class="profile-info">
+                                <img src="images/logos/logo.jpg" alt="SambaVest" class="profile-pic">
+                                <div class="profile-details">
+                                    <h4>sambavest</h4>
+                                    <span>Estilo SambaVest</span>
+                                </div>
+                            </div>
+                            <button class="follow-btn">Ver perfil</button>
+                        </div>
+                        <div class="instagram-content">
+                            <iframe 
+                                src="https://www.instagram.com/reel/DKdBpRHJ20O/embed" 
+                                width="100%" 
+                                height="400" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                allowtransparency="true">
+                            </iframe>
+                        </div>
+                        <div class="instagram-actions">
+                            <div class="action-buttons">
+                                <button>♡</button>
+                                <button>💬</button>
+                                <button>📤</button>
+                            </div>
+                            <button class="bookmark">🔖</button>
+                        </div>
+                        <div class="instagram-footer">
+                            <p>Adicione um comentário...</p>
+                            <button class="instagram-btn">
+                                <a href="https://www.instagram.com/reel/DKdBpRHJ20O/?igsh=cHlneGdkOW90Mm14" target="_blank">Ver Reel</a>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Card 5 - Looks em Oferta -->
-                    <div class="instagram-card reel-card">
-                        <div class="card-icon">💰</div>
-                        <h3>Looks em Oferta</h3>
-                        <p class="card-description">Promoções imperdíveis que você precisa ver!</p>
-                        <a href="https://www.instagram.com/reel/DKQJj2XJknc/?igsh=d3J2czNqYzF6NWg2" target="_blank" rel="noopener" class="instagram-btn">
-                            Ver Reel
-                        </a>
+                    <div class="instagram-card">
+                        <div class="instagram-header">
+                            <div class="profile-info">
+                                <img src="images/logos/logo.jpg" alt="SambaVest" class="profile-pic">
+                                <div class="profile-details">
+                                    <h4>sambavest</h4>
+                                    <span>Looks em Oferta</span>
+                                </div>
+                            </div>
+                            <button class="follow-btn">Ver perfil</button>
+                        </div>
+                        <div class="instagram-content">
+                            <iframe 
+                                src="https://www.instagram.com/reel/DKQJj2XJknc/embed" 
+                                width="100%" 
+                                height="400" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                allowtransparency="true">
+                            </iframe>
+                        </div>
+                        <div class="instagram-actions">
+                            <div class="action-buttons">
+                                <button>♡</button>
+                                <button>💬</button>
+                                <button>📤</button>
+                            </div>
+                            <button class="bookmark">🔖</button>
+                        </div>
+                        <div class="instagram-footer">
+                            <p>Adicione um comentário...</p>
+                            <button class="instagram-btn">
+                                <a href="https://www.instagram.com/reel/DKQJj2XJknc/?igsh=d3J2czNqYzF6NWg2" target="_blank">Ver Reel</a>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Card 6 - Samba é Moda -->
-                    <div class="instagram-card reel-card">
-                        <div class="card-icon">🎭</div>
-                        <h3>Samba é Moda</h3>
-                        <p class="card-description">A essência do carnaval em cada peça!</p>
+                    <div class="instagram-card">
+                        <div class="instagram-header">
+                            <div class="profile-info">
+                                <img src="images/logos/logo.jpg" alt="SambaVest" class="profile-pic">
+                                <div class="profile-details">
+                                    <h4>sambavest</h4>
+                                    <span>Samba é Moda</span>
+                                </div>
+                            </div>
+                            <button class="follow-btn">Ver perfil</button>
+                        </div>
+                        <div class="instagram-content">
+                            <iframe 
+                                src="https://www.instagram.com/reel/DJ-JOo5JkDK/embed" 
+                                width="100%" 
+                                height="400" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                allowtransparency="true">
+                            </iframe>
+                        </div>
+                        <div class="instagram-actions">
+                            <div class="action-buttons">
+                                <button>♡</button>
+                                <button>💬</button>
+                                <button>📤</button>
+                            </div>
+                            <button class="bookmark">🔖</button>
+                        </div>
+                        <div class="instagram-footer">
+                            <p>Adicione um comentário...</p>
+                            <button class="instagram-btn">
+                                <a href="https://www.instagram.com/reel/DJ-JOo5JkDK/?igsh=MWFjYzN2N3UwdnNyOA==" target="_blank">Ver Reel</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>d-description">A essência do carnaval em cada peça!</p>
                         <a href="https://www.instagram.com/reel/DJ-JOo5JkDK/?igsh=MWFjYzN2N3UwdnNyOA==" target="_blank" rel="noopener" class="instagram-btn">
                             Ver Reel
                         </a>
