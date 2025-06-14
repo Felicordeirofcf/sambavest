@@ -46,14 +46,34 @@
     transform: translateY(-8px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
-
-/* Product Image */
-.product-image {
+/* Product Image Container (para empilhar as imagens) */
+.product-image-container {
     position: relative;
-    overflow: hidden;
+    width: 100%;
     aspect-ratio: 1;
+    overflow: hidden;
 }
 
+/* Cada imagem (frente/costas) */
+.product-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Apenas a imagem ativa será exibida */
+.product-image.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+/* Imagem interna */
 .product-image img {
     width: 100%;
     height: 100%;
@@ -61,6 +81,7 @@
     transition: transform 0.3s ease;
 }
 
+/* Hover no card aumenta a imagem */
 .product-card:hover .product-image img {
     transform: scale(1.05);
 }
@@ -100,6 +121,48 @@
 .btn-wishlist:hover {
     background: #f1f5f9;
     transform: scale(1.05);
+}
+
+/* Product Info */
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-description {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Carousel Dots (botões de troca) */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: #cbd5e1;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+    background-color: #0f172a;
 }
 
 /* Product Info */
