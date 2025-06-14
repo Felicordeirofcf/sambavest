@@ -2,7 +2,7 @@
 .hero {
     background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
     color: white;
-    padding: 8rem 0 4rem;
+    padding: 2rem 0;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -23,6 +23,7 @@
 .hero-content {
     position: relative;
     z-index: 2;
+    margin-bottom: 2rem;
 }
 
 .hero h1 {
@@ -48,6 +49,7 @@
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
 .btn-primary,

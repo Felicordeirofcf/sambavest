@@ -48,6 +48,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/contact.css">
@@ -172,6 +173,43 @@
                         <a href="#contact" class="btn-secondary">Fale Conosco</a>
                     </div>
                 </div>
+                
+                <!-- Carousel -->
+                <div class="hero-carousel">
+                    <div class="carousel-container">
+                        <!-- Slide 1: Promoção das Campeãs -->
+                        <div class="carousel-slide active" style="background-image: url('images/banners/promocao-das-campeas.jpg')">
+                            <div class="slide-content">
+                                <h2>Promoção das Campeãs</h2>
+                                <p>2 camisas por apenas R$ 149,90! Aproveite essa oferta especial das escolas campeãs.</p>
+                                <a href="https://sambavest.com/produto/promocao-das-campeas/" class="slide-cta" target="_blank" rel="noopener">
+                                    Aproveitar Oferta
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2: Banner Desktop -->
+                        <div class="carousel-slide" style="background-image: url('images/banners/banner-desktop-1.webp')">
+                            <div class="slide-content">
+                                <h2>Vista a Paixão do Carnaval</h2>
+                                <p>Camisas oficiais e licenciadas das escolas de samba do Rio de Janeiro com qualidade premium.</p>
+                                <a href="#products" class="slide-cta">
+                                    Ver Coleção
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation Arrows -->
+                    <button class="carousel-arrow prev" aria-label="Slide anterior">‹</button>
+                    <button class="carousel-arrow next" aria-label="Próximo slide">›</button>
+                    
+                    <!-- Dots Navigation -->
+                    <div class="carousel-nav">
+                        <button class="carousel-dot active" aria-label="Ir para slide 1"></button>
+                        <button class="carousel-dot" aria-label="Ir para slide 2"></button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -285,6 +323,7 @@
     <script src="js/image-optimization-config.js"></script>
     <script src="js/responsive-images.js"></script>
     <script src="js/marketing-tracker.js"></script>
+    <script src="js/carousel.js"></script>
     <script src="js/header.js"></script>
     <script src="js/products.js"></script>
     <script src="js/contact.js"></script>
