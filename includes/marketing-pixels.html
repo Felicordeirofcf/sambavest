@@ -1,0 +1,131 @@
+<!-- CONFIGURAÇÃO DE CAMPANHAS E CONVERSÕES -->
+<!-- Este arquivo centraliza todos os códigos de rastreamento para facilitar a gestão de campanhas -->
+
+<!-- Facebook Pixel (Meta Ads) - ESSENCIAL PARA CONVERSÕES -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    // SUBSTITUA PELO SEU PIXEL ID DO FACEBOOK
+    fbq('init', 'YOUR_FACEBOOK_PIXEL_ID'); 
+    fbq('track', 'PageView');
+    
+    // Eventos de conversão personalizados
+    function trackPurchase(value, currency = 'BRL') {
+        fbq('track', 'Purchase', {
+            value: value,
+            currency: currency,
+            content_type: 'product',
+            content_category: 'camisas_carnaval'
+        });
+    }
+    
+    function trackAddToCart(productName, value) {
+        fbq('track', 'AddToCart', {
+            content_name: productName,
+            value: value,
+            currency: 'BRL'
+        });
+    }
+    
+    function trackInitiateCheckout() {
+        fbq('track', 'InitiateCheckout');
+    }
+</script>
+<noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_FACEBOOK_PIXEL_ID&ev=PageView&noscript=1"
+/></noscript>
+
+<!-- TikTok Pixel - PARA CAMPANHAS NO TIKTOK -->
+<script>
+    !function (w, d, t) {
+        w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+        
+        // SUBSTITUA PELO SEU PIXEL ID DO TIKTOK
+        ttq.load('YOUR_TIKTOK_PIXEL_ID');
+        ttq.page();
+        
+        // Função para rastrear compras no TikTok
+        window.trackTikTokPurchase = function(value) {
+            ttq.track('CompletePayment', {
+                value: value,
+                currency: 'BRL'
+            });
+        };
+    }(window, document, 'ttq');
+</script>
+
+<!-- Google Analytics 4 - ANÁLISE DE COMPORTAMENTO -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    // SUBSTITUA PELO SEU ID DO GOOGLE ANALYTICS
+    gtag('config', 'GA_MEASUREMENT_ID', {
+        // Configurações para e-commerce
+        send_page_view: true,
+        custom_map: {
+            'custom_parameter_1': 'escola_samba',
+            'custom_parameter_2': 'tipo_produto'
+        }
+    });
+    
+    // Função para rastrear compras no GA4
+    function trackGA4Purchase(transactionId, value, items) {
+        gtag('event', 'purchase', {
+            transaction_id: transactionId,
+            value: value,
+            currency: 'BRL',
+            items: items
+        });
+    }
+</script>
+
+<!-- Google Ads Conversion Tracking - CONVERSÕES GOOGLE ADS -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    // SUBSTITUA PELO SEU ID DE CONVERSÃO DO GOOGLE ADS
+    gtag('config', 'AW-CONVERSION_ID');
+    
+    // Função para rastrear conversões do Google Ads
+    function trackGoogleAdsConversion(value) {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+            'value': value,
+            'currency': 'BRL'
+        });
+    }
+</script>
+
+<!-- Structured Data para SEO e Google Shopping -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Samba Vest",
+    "url": "https://sambavest.com",
+    "logo": "https://sambavest.com/images/logo.png",
+    "description": "Camisas oficiais e licenciadas do carnaval carioca",
+    "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BR"
+    },
+    "sameAs": [
+        "https://www.facebook.com/sambavest",
+        "https://www.instagram.com/sambavest"
+    ]
+}
+</script>
+

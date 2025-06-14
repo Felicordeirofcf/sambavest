@@ -1,0 +1,43 @@
+{
+  "name": "sambavest-modular",
+  "version": "1.0.0",
+  "description": "Site modular da Samba Vest - Camisas oficiais do carnaval carioca",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "npm run optimize-images",
+    "optimize-images": "cd images && chmod +x optimize_images.sh && ./optimize_images.sh",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "carnaval",
+    "samba",
+    "camisas",
+    "rio de janeiro",
+    "escolas de samba",
+    "roupas carnaval"
+  ],
+  "author": "Samba Vest",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "compression": "^1.7.4",
+    "helmet": "^7.1.0",
+    "cors": "^2.8.5",
+    "serve-static": "^1.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Felicordeirofcf/sambavest.git"
+  },
+  "homepage": "https://sambavest.com"
+}
+

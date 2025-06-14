@@ -1,0 +1,151 @@
+<section id="products" class="products-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Camisas Oficiais das Escolas de Samba</h2>
+            <p>Vista as cores e a paixão do carnaval carioca com nossas camisas oficiais licenciadas</p>
+        </div>
+
+        <div class="products-grid">
+            <!-- Camisa Beija-Flor -->
+            <div class="product-card" data-school="beija-flor" data-price="89.90">
+                <div class="product-image">
+                    <img src="images/products/camisa-beija-flor-frente.jpg" 
+                         alt="Camisa oficial Beija-Flor enredo 2025 - Roupa carnaval carioca licenciada"
+                         loading="lazy">
+                    <div class="product-overlay">
+                        <button class="btn-quick-view" onclick="openProductModal('beija-flor')">
+                            👁️ Visualizar
+                        </button>
+                        <button class="btn-wishlist" onclick="addToWishlist('beija-flor')">
+                            ❤️
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Camisa Beija-Flor Enredo 2025</h3>
+                    <p class="product-description">Camisa oficial licenciada da escola de samba Beija-Flor de Nilópolis</p>
+                    <div class="product-price">
+                        <span class="price-current">R$ 89,90</span>
+                        <span class="price-installments">ou 3x de R$ 29,97</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-add-cart" onclick="addToCart('beija-flor', 89.90)">
+                            🛒 Adicionar ao Carrinho
+                        </button>
+                        <button class="btn-buy-now" onclick="buyNow('beija-flor', 89.90)">
+                            ⚡ Comprar Agora
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Camisa Salgueiro -->
+            <div class="product-card" data-school="salgueiro" data-price="89.90">
+                <div class="product-image">
+                    <img src="images/products/camisa-salgueiro-frente.jpg" 
+                         alt="Camisa oficial Salgueiro enredo 2025 - Samba vest carnaval rio licenciada"
+                         loading="lazy">
+                    <div class="product-overlay">
+                        <button class="btn-quick-view" onclick="openProductModal('salgueiro')">
+                            👁️ Visualizar
+                        </button>
+                        <button class="btn-wishlist" onclick="addToWishlist('salgueiro')">
+                            ❤️
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Camisa Salgueiro Enredo 2025</h3>
+                    <p class="product-description">Camisa oficial licenciada da escola de samba Acadêmicos do Salgueiro</p>
+                    <div class="product-price">
+                        <span class="price-current">R$ 89,90</span>
+                        <span class="price-installments">ou 3x de R$ 29,97</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-add-cart" onclick="addToCart('salgueiro', 89.90)">
+                            🛒 Adicionar ao Carrinho
+                        </button>
+                        <button class="btn-buy-now" onclick="buyNow('salgueiro', 89.90)">
+                            ⚡ Comprar Agora
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Camisa Viradouro -->
+            <div class="product-card" data-school="viradouro" data-price="89.90">
+                <div class="product-image">
+                    <img src="images/products/camisa-viradouro-frente.jpg" 
+                         alt="Camisa oficial Viradouro enredo 2025 - Camisas carnaval oficiais licenciadas"
+                         loading="lazy">
+                    <div class="product-overlay">
+                        <button class="btn-quick-view" onclick="openProductModal('viradouro')">
+                            👁️ Visualizar
+                        </button>
+                        <button class="btn-wishlist" onclick="addToWishlist('viradouro')">
+                            ❤️
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Camisa Viradouro Enredo 2025</h3>
+                    <p class="product-description">Camisa oficial licenciada da escola de samba Unidos do Viradouro</p>
+                    <div class="product-price">
+                        <span class="price-current">R$ 89,90</span>
+                        <span class="price-installments">ou 3x de R$ 29,97</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-add-cart" onclick="addToCart('viradouro', 89.90)">
+                            🛒 Adicionar ao Carrinho
+                        </button>
+                        <button class="btn-buy-now" onclick="buyNow('viradouro', 89.90)">
+                            ⚡ Comprar Agora
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banner Promocional -->
+        <div class="promotional-banner">
+            <img src="images/banners/promocao-campeas.jpg" 
+                 alt="Promoção especial camisas das campeãs carnaval carioca"
+                 loading="lazy">
+            <div class="banner-content">
+                <h3>Promoção Especial das Campeãs!</h3>
+                <p>Desconto especial nas camisas das escolas campeãs</p>
+                <button class="btn-banner" onclick="scrollToProducts()">
+                    Ver Ofertas
+                </button>
+            </div>
+        </div>
+
+        <!-- Filtros e Busca -->
+        <div class="products-filters">
+            <div class="filter-group">
+                <label>Escola:</label>
+                <select id="school-filter" onchange="filterProducts()">
+                    <option value="">Todas as Escolas</option>
+                    <option value="beija-flor">Beija-Flor</option>
+                    <option value="salgueiro">Salgueiro</option>
+                    <option value="viradouro">Viradouro</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Preço:</label>
+                <select id="price-filter" onchange="filterProducts()">
+                    <option value="">Todos os Preços</option>
+                    <option value="0-50">Até R$ 50</option>
+                    <option value="50-100">R$ 50 - R$ 100</option>
+                    <option value="100+">Acima de R$ 100</option>
+                </select>
+            </div>
+            <div class="search-group">
+                <input type="text" id="product-search" placeholder="Buscar produtos..." 
+                       onkeyup="searchProducts()" oninput="trackSearch(this.value)">
+                <button onclick="searchProducts()">🔍</button>
+            </div>
+        </div>
+    </div>
+</section>
+

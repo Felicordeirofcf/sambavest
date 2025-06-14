@@ -1,0 +1,16 @@
+# Railway Configuration
+# Este arquivo configura o deploy no Railway
+
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "npm start"
+healthcheckPath = "/"
+healthcheckTimeout = 300
+restartPolicyType = "ON_FAILURE"
+
+[env]
+NODE_ENV = "production"
+PORT = "$PORT"
+
