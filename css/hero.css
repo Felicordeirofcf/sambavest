@@ -6,7 +6,7 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-    margin-top: 80px; /* Compensar header fixo */
+    margin-top: 0; /* Remover margin-top para ocupar a largura total */
 }
 
 .hero::before {
