@@ -619,9 +619,94 @@
         .submit-button:hover {
             background: #1d4ed8;
             transform: translateY(-1px);
+        }        /* Fim: Formulário de Contato */
+
+        /* Início: Instagram */
+        .instagram-section {
+            padding: 80px 0;
+            background: #ffffff;
+            text-align: center;
         }
-        /* Fim: Formulário de Contato */
-        
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            justify-content: center;
+        }
+
+        .instagram-card {
+            background: #f9fafb;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .instagram-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .instagram-media {
+            width: 100% !important;
+            margin: 0 auto !important;
+            max-width: 320px; /* Limita a largura do embed do Instagram */
+        }
+
+        .instagram-follow-card {
+            background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .instagram-follow-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .instagram-follow-button {
+            display: inline-block;
+            background: white;
+            color: #dc2743;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .instagram-follow-button:hover {
+            background: #eee;
+            transform: translateY(-2px);
+        }
+
+        /* Responsividade para Instagram */
+        @media (max-width: 768px) {
+            .instagram-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Fim: Instagram */
+
+        /* Início: Rodapé */
         /* Início: Cálculo de Frete */
         .shipping-calculator {
             background: #e0f2fe;
@@ -1078,11 +1163,248 @@
                 </form>
             </div>
         </div>
-    </section>
-    <!-- Fim: Formulário de Contato -->
+    </sec              <!-- Fim: Formulário de Contato -->
 
-    <!-- Início: Rodapé -->
-    <footer class="footer">
+        <!-- Início: Instagram -->
+        <section class="instagram-section">
+            <div class="container">
+                <h2 class="section-title">Veja nosso Instagram</h2>
+                <p class="section-subtitle">Acompanhe nosso dia a dia e as novidades do carnaval!</p>
+                <div class="instagram-grid">
+                    <!-- Card para seguir o perfil -->
+                    <div class="instagram-card instagram-follow-card">
+                        <h3>Siga a @sambavest no Instagram</h3>
+                        <a href="https://instagram.com/sambavest" target="_blank" rel="noopener noreferrer" class="instagram-follow-button">Seguir @sambavest</a>
+                    </div>
+                    <!-- Post 1 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C74t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 2 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C738y24x4xL/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 3 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C72x9_7R0zS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 4 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C71t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 5 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C70t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 6 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C69t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fim: Instagram -->
+
+        <!-- Início: Rodapé -->-->
+        <section class="instagram-section">
+            <div class="container">
+                <h2 class="section-title">Veja nosso Instagram</h2>
+                <p class="section-subtitle">Acompanhe nosso dia a dia e as novidades do carnaval!</p>
+                <div class="instagram-grid">
+                    <!-- Card para seguir o perfil -->
+                    <div class="instagram-card instagram-follow-card">
+                        <h3>Siga a @sambavest no Instagram</h3>
+                        <a href="https://instagram.com/sambavest" target="_blank" rel="noopener noreferrer" class="instagram-follow-button">Seguir @sambavest</a>
+                    </div>
+                    <!-- Post 1 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C74t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 2 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C738y24x4xL/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 3 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C72x9_7R0zS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 4 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C71t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 5 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C70t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 6 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C69t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fim: Instagram -->
+
+        <!-- Início: Rodapé -->
+        <section class="instagram-section">
+            <div class="container">
+                <h2 class="section-title">Veja nosso Instagram</h2>
+                <p class="section-subtitle">Acompanhe nosso dia a dia e as novidades do carnaval!</p>
+                <div class="instagram-grid">
+                    <!-- Card para seguir o perfil -->
+                    <div class="instagram-card instagram-follow-card">
+                        <h3>Siga a @sambavest no Instagram</h3>
+                        <a href="https://instagram.com/sambavest" target="_blank" rel="noopener noreferrer" class="instagram-follow-button">Seguir @sambavest</a>
+                    </div>
+                    <!-- Post 1 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C74t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 2 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C738y24x4xL/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 3 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C72x9_7R0zS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 4 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C71t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 5 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C70t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 6 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C69t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fim: Instagram -->
+
+        <!-- Início: Rodapé -->
+        <section class="instagram-section">
+            <div class="container">
+                <h2 class="section-title">Veja nosso Instagram</h2>
+                <p class="section-subtitle">Acompanhe nosso dia a dia e as novidades do carnaval!</p>
+                <div class="instagram-grid">
+                    <!-- Card para seguir o perfil -->
+                    <div class="instagram-card instagram-follow-card">
+                        <h3>Siga a @sambavest no Instagram</h3>
+                        <a href="https://instagram.com/sambavest" target="_blank" rel="noopener noreferrer" class="instagram-follow-button">Seguir @sambavest</a>
+                    </div>
+                    <!-- Post 1 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C74t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 2 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C738y24x4xL/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 3 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C72x9_7R0zS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 4 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C71t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 5 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C70t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 6 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C69t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fim: Instagram -->
+
+        <!-- Início: Rodapé -->    <section class="instagram-section">
+        <div class="container">
+            <h2 class="section-title">Veja nosso Instagram</h2>
+            <p class="section-subtitle">Acompanhe nosso dia a dia e as novidades do carnaval!</p>
+            <div class="instagram-grid">
+                <!-- Card para seguir o perfil -->
+                <div class="instagram-card instagram-follow-card">
+                    <h3>Siga a @sambavest no Instagram</h3>
+                    <a href="https://instagram.com/sambavest" target="_blank" rel="noopener noreferrer" class="instagram-follow-button">Seguir @sambavest</a>
+                </div>
+                <!-- Post 1 -->
+                <div class="instagram-card">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C74t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                </div>
+                <!-- Post 2 -->
+                <div class="instagram-card">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C738y24x4xL/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                </div>
+                <!-- Post 3 -->
+                <div class="instagram-card">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C72x9_7R0zS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                </div>
+                <!-- Post 4 -->
+                <div class="instagram-card">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C71t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                </div>
+                <!-- Post 5 -->
+                <div class="instagram-card">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C70t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                </div>
+                <!-- Post 6 -->
+                <div class="instagram-card">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C69t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fim: Instagram -->
+
+    <!-- Início: Rodapé -->ram -->
+        <section class="instagram-section">
+            <div class="container">
+                <h2 class="section-title">Veja nosso Instagram</h2>
+                <p class="section-subtitle">Acompanhe nosso dia a dia e as novidades do carnaval!</p>
+                <div class="instagram-grid">
+                    <!-- Card para seguir o perfil -->
+                    <div class="instagram-card instagram-follow-card">
+                        <h3>Siga a @sambavest no Instagram</h3>
+                        <a href="https://instagram.com/sambavest" target="_blank" rel="noopener noreferrer" class="instagram-follow-button">Seguir @sambavest</a>
+                    </div>
+                    <!-- Post 1 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C74t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 2 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C738y24x4xL/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 3 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C72x9_7R0zS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 4 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C71t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 5 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C70t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                    <!-- Post 6 -->
+                    <div class="instagram-card">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C69t_15R2tS/?utm_source=ig_web_copy_link" data-instgrm-version="14"></blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fim: Instagram -->
+
+        <!-- Início: Rodapé -->   <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -1413,10 +1735,10 @@
             });
         }
 
-        // Chamar a função para buscar produtos ao carregar a página
-        document.addEventListener('DOMContentLoaded', function() {
+           // Chamar a função para buscar produtos do WooCommerce quando a página carregar
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log("DOM completamente carregado. Iniciando busca de produtos WooCommerce...");
             fetchWooCommerceProducts();
-            addCartEventListeners(); // Para produtos placeholder
         });
 
     </script>
@@ -1456,6 +1778,7 @@
     </script>
     -->
 
+    <script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
 
