@@ -1,0 +1,635 @@
+/* ========================================
+   SAMBAVEST - CSS RESPONSIVO OTIMIZADO
+   ========================================
+   
+   Este arquivo corrige todos os problemas de responsividade
+   identificados no site SambaVest, implementando:
+   
+   - Sistema de breakpoints consistente
+   - Unidades relativas (rem, %, vw, vh)
+   - Layout flexível e adaptável
+   - Touch targets adequados
+   - Melhor contraste e legibilidade
+   
+   Breakpoints utilizados:
+   - 320px: Mobile pequeno
+   - 480px: Mobile médio
+   - 768px: Tablet
+   - 992px: Desktop pequeno
+   - 1200px: Desktop médio
+   - 1400px: Desktop grande
+   ======================================== */
+
+/* ========================================
+   1. RESET E BASE MELHORADO
+   ======================================== */
+
+/* Melhorar o sistema base com unidades relativas */
+:root {
+    /* Breakpoints */
+    --bp-xs: 320px;
+    --bp-sm: 480px;
+    --bp-md: 768px;
+    --bp-lg: 992px;
+    --bp-xl: 1200px;
+    --bp-xxl: 1400px;
+    
+    /* Espaçamentos consistentes */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-xxl: 4rem;
+    
+    /* Tipografia responsiva */
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-base: 1rem;
+    --font-lg: 1.125rem;
+    --font-xl: 1.25rem;
+    --font-2xl: 1.5rem;
+    --font-3xl: 2rem;
+    --font-4xl: 2.5rem;
+    
+    /* Touch targets */
+    --touch-target: 44px;
+    
+    /* Container responsivo */
+    --container-padding: clamp(1rem, 4vw, 2rem);
+}
+
+/* Container melhorado */
+.container {
+    max-width: min(1200px, 100% - var(--container-padding) * 2);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* ========================================
+   2. HEADER RESPONSIVO OTIMIZADO
+   ======================================== */
+
+.header {
+    padding: clamp(0.5rem, 2vw, 1rem) 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.logo img {
+    height: clamp(2rem, 5vw, 2.5rem);
+    width: auto;
+    max-width: 100%;
+}
+
+.nav-menu {
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
+.nav-link {
+    font-size: var(--font-base);
+    padding: var(--space-xs) var(--space-sm);
+    min-height: var(--touch-target);
+    display: flex;
+    align-items: center;
+}
+
+.mobile-menu-toggle {
+    min-width: var(--touch-target);
+    min-height: var(--touch-target);
+    font-size: var(--font-xl);
+}
+
+/* ========================================
+   3. HERO/CAROUSEL RESPONSIVO
+   ======================================== */
+
+.hero-carousel {
+    height: clamp(300px, 50vh, 600px);
+    border-radius: clamp(0px, 1vw, 12px);
+    overflow: hidden;
+}
+
+.carousel-slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slide-content {
+    padding: clamp(1rem, 4vw, 2rem);
+    max-width: min(600px, 90%);
+}
+
+.slide-content h2 {
+    font-size: clamp(var(--font-2xl), 5vw, var(--font-4xl));
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
+    line-height: 1.2;
+}
+
+.slide-content p {
+    font-size: clamp(var(--font-base), 2.5vw, var(--font-lg));
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+    line-height: 1.5;
+}
+
+.slide-cta {
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+    font-size: clamp(var(--font-base), 2vw, var(--font-lg));
+    min-height: var(--touch-target);
+    border-radius: clamp(6px, 1vw, 8px);
+}
+
+/* Setas do carousel */
+.carousel-arrow {
+    width: clamp(40px, 8vw, 50px);
+    height: clamp(40px, 8vw, 50px);
+    font-size: clamp(var(--font-lg), 3vw, var(--font-2xl));
+}
+
+.carousel-arrow.prev {
+    left: clamp(10px, 2vw, 20px);
+}
+
+.carousel-arrow.next {
+    right: clamp(10px, 2vw, 20px);
+}
+
+/* Dots do carousel */
+.carousel-dot {
+    width: clamp(10px, 2vw, 12px);
+    height: clamp(10px, 2vw, 12px);
+    margin: 0 clamp(3px, 1vw, 5px);
+}
+
+/* ========================================
+   4. PRODUTOS RESPONSIVOS OTIMIZADOS
+   ======================================== */
+
+.featured-products-section {
+    padding: clamp(var(--space-xl), 8vw, var(--space-xxl)) 0;
+}
+
+.section-title {
+    font-size: clamp(var(--font-2xl), 5vw, var(--font-4xl));
+    margin-bottom: clamp(var(--space-lg), 5vw, var(--space-xl));
+}
+
+/* Grid responsivo melhorado */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: clamp(var(--space-md), 4vw, var(--space-lg));
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* Cards de produtos otimizados */
+.product-card {
+    min-height: auto; /* Remove altura fixa */
+    border-radius: clamp(8px, 2vw, 15px);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-carousel {
+    height: clamp(200px, 30vw, 300px);
+    flex-shrink: 0;
+}
+
+.product-image img {
+    object-fit: cover; /* Muda de contain para cover */
+    object-position: center;
+}
+
+.product-info {
+    padding: clamp(var(--space-md), 3vw, var(--space-lg));
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info h3 {
+    font-size: clamp(var(--font-lg), 3vw, var(--font-xl));
+    margin-bottom: var(--space-sm);
+}
+
+/* Preços responsivos */
+.product-prices {
+    margin: var(--space-sm) 0;
+    min-height: auto; /* Remove altura fixa */
+}
+
+.current-price {
+    font-size: clamp(var(--font-xl), 4vw, var(--font-2xl));
+    margin-bottom: var(--space-xs);
+}
+
+.current-price::before {
+    font-size: clamp(var(--font-xs), 2vw, var(--font-sm));
+    top: clamp(-14px, -3vw, -18px);
+}
+
+/* Calculadora de frete responsiva */
+.shipping-calculator {
+    margin-bottom: var(--space-md);
+}
+
+.shipping-input-row {
+    display: flex;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+}
+
+.cep-input {
+    flex: 1;
+    min-width: 120px;
+    padding: clamp(8px, 2vw, 12px);
+    font-size: var(--font-sm);
+    min-height: var(--touch-target);
+}
+
+.calc-shipping-btn {
+    flex: 0 0 auto;
+    min-width: 100px;
+    padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 16px);
+    font-size: var(--font-sm);
+    min-height: var(--touch-target);
+    white-space: nowrap;
+}
+
+/* Botão do produto */
+.product-btn {
+    padding: clamp(12px, 3vw, 15px);
+    font-size: clamp(var(--font-sm), 2.5vw, var(--font-base));
+    min-height: var(--touch-target);
+    margin-top: auto;
+    border-radius: clamp(6px, 1.5vw, 10px);
+}
+
+/* ========================================
+   5. FORMULÁRIO DE CONTATO RESPONSIVO
+   ======================================== */
+
+.contact-section {
+    padding: clamp(var(--space-xl), 8vw, var(--space-xxl)) 0;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(var(--space-lg), 5vw, var(--space-xl));
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.contact-info h2 {
+    font-size: clamp(var(--font-2xl), 5vw, var(--font-4xl));
+    margin-bottom: var(--space-md);
+}
+
+.contact-info p {
+    font-size: clamp(var(--font-base), 2.5vw, var(--font-lg));
+    margin-bottom: var(--space-lg);
+}
+
+.contact-item {
+    padding: clamp(var(--space-sm), 3vw, var(--space-md));
+    margin-bottom: var(--space-md);
+    border-radius: clamp(8px, 2vw, 12px);
+}
+
+.contact-item-icon {
+    width: clamp(40px, 8vw, 50px);
+    height: clamp(40px, 8vw, 50px);
+    font-size: clamp(var(--font-base), 3vw, var(--font-lg));
+}
+
+.contact-form {
+    padding: clamp(var(--space-md), 4vw, var(--space-lg));
+    border-radius: clamp(12px, 3vw, 16px);
+}
+
+.contact-form h3 {
+    font-size: clamp(var(--font-xl), 4vw, var(--font-2xl));
+    margin-bottom: var(--space-md);
+}
+
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: clamp(10px, 2vw, 12px);
+    font-size: var(--font-base);
+    min-height: var(--touch-target);
+    border-radius: clamp(6px, 1vw, 8px);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+.btn-submit,
+.whatsapp-btn {
+    padding: clamp(12px, 3vw, 16px) clamp(var(--space-md), 4vw, var(--space-lg));
+    font-size: clamp(var(--font-base), 2.5vw, var(--font-lg));
+    min-height: var(--touch-target);
+    border-radius: clamp(6px, 1.5vw, 8px);
+}
+
+/* ========================================
+   6. POPUP RESPONSIVO OTIMIZADO
+   ======================================== */
+
+.popup-content {
+    max-width: min(500px, 95vw);
+    width: 100%;
+    max-height: 90vh;
+    border-radius: clamp(12px, 3vw, 20px);
+    margin: var(--space-md);
+}
+
+.popup-header {
+    padding: clamp(var(--space-md), 4vw, var(--space-lg));
+    border-radius: clamp(12px, 3vw, 20px) clamp(12px, 3vw, 20px) 0 0;
+}
+
+.popup-close {
+    width: clamp(30px, 6vw, 40px);
+    height: clamp(30px, 6vw, 40px);
+    font-size: clamp(var(--font-lg), 4vw, var(--font-2xl));
+    top: clamp(10px, 2vw, 15px);
+    right: clamp(15px, 3vw, 20px);
+}
+
+.popup-title {
+    font-size: clamp(var(--font-xl), 4vw, var(--font-2xl));
+    margin-bottom: clamp(5px, 1vw, 10px);
+}
+
+.popup-subtitle {
+    font-size: clamp(var(--font-sm), 2.5vw, var(--font-base));
+}
+
+.popup-body {
+    padding: clamp(var(--space-md), 4vw, var(--space-lg));
+}
+
+.popup-current-price {
+    font-size: clamp(var(--font-2xl), 5vw, var(--font-3xl));
+    margin-bottom: clamp(5px, 1vw, 10px);
+}
+
+.popup-buttons {
+    display: flex;
+    gap: var(--space-sm);
+    flex-direction: column;
+}
+
+.popup-btn {
+    min-width: auto;
+    padding: clamp(12px, 3vw, 15px) clamp(var(--space-md), 4vw, var(--space-lg));
+    font-size: clamp(var(--font-base), 2.5vw, var(--font-lg));
+    min-height: var(--touch-target);
+    border-radius: clamp(25px, 5vw, 50px);
+}
+
+/* ========================================
+   7. FOOTER RESPONSIVO OTIMIZADO
+   ======================================== */
+
+.footer {
+    padding: clamp(var(--space-xl), 6vw, var(--space-xxl)) 0 var(--space-md);
+    margin-top: clamp(var(--space-xl), 6vw, var(--space-xxl));
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: clamp(var(--space-md), 4vw, var(--space-lg));
+    margin-bottom: var(--space-lg);
+}
+
+.footer-section h3 {
+    font-size: clamp(var(--font-xl), 3vw, var(--font-2xl));
+    margin-bottom: var(--space-md);
+}
+
+.footer-section h4 {
+    font-size: clamp(var(--font-lg), 2.5vw, var(--font-xl));
+    margin-bottom: var(--space-sm);
+}
+
+.footer-section p {
+    font-size: clamp(var(--font-sm), 2vw, var(--font-base));
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+}
+
+.social-links a {
+    font-size: clamp(var(--font-xl), 4vw, var(--font-2xl));
+    min-width: var(--touch-target);
+    min-height: var(--touch-target);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-bottom {
+    padding-top: var(--space-md);
+    font-size: clamp(var(--font-sm), 2vw, var(--font-base));
+}
+
+/* ========================================
+   8. MEDIA QUERIES ESPECÍFICAS
+   ======================================== */
+
+/* Mobile pequeno (320px+) */
+@media (min-width: 320px) {
+    .shipping-input-row {
+        flex-direction: column;
+    }
+    
+    .calc-shipping-btn {
+        width: 100%;
+    }
+}
+
+/* Mobile médio (480px+) */
+@media (min-width: 480px) {
+    .shipping-input-row {
+        flex-direction: row;
+    }
+    
+    .popup-buttons {
+        flex-direction: row;
+    }
+}
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop pequeno (992px+) */
+@media (min-width: 992px) {
+    .nav-menu {
+        display: flex;
+    }
+    
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop médio (1200px+) */
+@media (min-width: 1200px) {
+    .popup-content {
+        max-width: 600px;
+    }
+    
+    .popup-buttons {
+        flex-direction: row;
+    }
+}
+
+/* Desktop grande (1400px+) */
+@media (min-width: 1400px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ========================================
+   9. MELHORIAS DE ACESSIBILIDADE
+   ======================================== */
+
+/* Melhor contraste para textos */
+.product-info h3,
+.section-title,
+.contact-info h2 {
+    color: #1a202c; /* Contraste melhorado */
+}
+
+/* Focus visível para navegação por teclado */
+.nav-link:focus,
+.product-btn:focus,
+.btn-submit:focus,
+.popup-btn:focus {
+    outline: 2px solid #3182ce;
+    outline-offset: 2px;
+}
+
+/* Melhor legibilidade em dispositivos de alta densidade */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* ========================================
+   10. OTIMIZAÇÕES DE PERFORMANCE
+   ======================================== */
+
+/* Reduzir repaint em animações */
+.product-card,
+.carousel-slide,
+.popup-content {
+    will-change: transform;
+}
+
+/* Otimizar transições */
+* {
+    transition-duration: 0.2s;
+}
+
+.product-card:hover,
+.carousel-arrow:hover,
+.popup-btn:hover {
+    transition-duration: 0.3s;
+}
+
+/* ========================================
+   11. CORREÇÕES ESPECÍFICAS
+   ======================================== */
+
+/* Corrigir sobreposição de preços */
+.product-prices {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.current-price::before {
+    position: static;
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+/* Melhorar espaçamento dos dots do carousel */
+.carousel-dots {
+    gap: var(--space-xs);
+    padding: var(--space-sm);
+}
+
+/* Corrigir layout do WhatsApp button */
+.whatsapp-button {
+    width: clamp(50px, 10vw, 60px);
+    height: clamp(50px, 10vw, 60px);
+    bottom: clamp(15px, 3vw, 20px);
+    right: clamp(15px, 3vw, 20px);
+    font-size: clamp(var(--font-xl), 4vw, var(--font-2xl));
+}
+
+/* ========================================
+   12. PRINT STYLES
+   ======================================== */
+
+@media print {
+    .header,
+    .popup-overlay,
+    .whatsapp-button,
+    .carousel-arrow,
+    .carousel-nav {
+        display: none !important;
+    }
+    
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+    
+    .product-card {
+        break-inside: avoid;
+        margin-bottom: 1rem;
+    }
+}
+

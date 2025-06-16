@@ -568,6 +568,45 @@
         }
     });
 </script>
+
+<script>
+document.querySelectorAll('.calc-shipping-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        const parent = this.closest('.shipping-calculator');
+        const cepInput = parent.querySelector('.cep-input');
+        const shippingResult = parent.querySelector('.shipping-result');
+
+        const cep = cepInput.value.trim().replace(/\D/g, '');
+
+        if (!cep || cep.length !== 8) {
+            alert('Por favor, insira um CEP válido com 8 dígitos.');
+            return;
+        }
+
+        // Simulação simples de preços conforme região
+        let pac = 'R$ 19,90';
+        let sedex = 'R$ 29,90';
+
+        if (cep.startsWith('2')) {
+            pac = 'R$ 14,90';
+            sedex = 'R$ 24,90';
+        } else if (cep.startsWith('3')) {
+            pac = 'R$ 16,90';
+            sedex = 'R$ 26,90';
+        }
+
+        // Preencher os valores dinamicamente
+        const pacElement = shippingResult.querySelector('.shipping-option:nth-child(1) .shipping-price');
+        const sedexElement = shippingResult.querySelector('.shipping-option:nth-child(2) .shipping-price');
+
+        pacElement.textContent = pac;
+        sedexElement.textContent = sedex;
+
+        shippingResult.style.display = 'block';
+    });
+});
+</script>
+
 </body>
 
 
