@@ -49,10 +49,7 @@
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/featured-products.css">
-    <link rel="stylesheet" href="css/instagram-embed.css">
-    <link rel="stylesheet" href="css/instagram-dynamic.css">
-    <link rel="stylesheet" href="css/instagram-real-posts.css">
-    <link rel="stylesheet" href="css/instagram-real-posts-production.css">
+
     <link rel="stylesheet" href="css/promotional-prices.css">
     <link rel="stylesheet" href="css/woocommerce-card.css">
     <link rel="stylesheet" href="css/products.css">
@@ -189,7 +186,9 @@
         <!-- Featured Products Section -->
         <section class="featured-products-section">
             <div class="container">
-                <h2 class="section-title">Produtos em Destaque</h2>
+                <h2 class="section-title destaque-title">
+    ✨ Produtos em Destaque ✨
+</h2>
                 <div class="products-grid">
                     <!-- Card 1 - Camisa Salgueiro -->
                     <div class="product-card">
@@ -337,30 +336,23 @@
 
                 </div>
             </div>
-        </section>
+        
 
-        <!-- Instagram Section -->
-        <section class="instagram-section" id="instagram-section">
+        <!-- Instagram Promo Section -->
+        <section class="instagram-promo-section">
             <div class="container">
-                <div class="instagram-header">
-                    <h2 class="section-title">Veja nosso Instagram</h2>
-                    <p class="section-subtitle">Acompanhe as novidades, bastidores e muito mais em nosso Instagram oficial.</p>
-                </div>
-                
-                <!-- Grid será populado dinamicamente pelo JavaScript -->
-                <div class="instagram-embed-grid" id="instagram-grid">
-                    <!-- Loading placeholder -->
-                    <div class="loading-placeholder">
-                        <div class="loading-spinner"></div>
-                        <p>Carregando posts do Instagram...</p>
-                    </div>
-                </div>
-                
-                <!-- Botão para ver mais posts -->
-                <div class="instagram-footer">
-                    <a href="https://www.instagram.com/sambavest/" target="_blank" class="btn btn-instagram">
-                        <span class="instagram-icon">📷</span>
-                        Ver mais no Instagram
+                <h2 class="section-title">✨ Conecte-se Conosco no Instagram! ✨</h2>
+                <p class="section-description">Acompanhe o nosso universo vibrante e mergulhe ainda mais na paixão do Carnaval!</p>
+                <div class="instagram-promo-content">
+                    <p><strong>No nosso Instagram, você encontra:</strong></p>
+                    <ul>
+                        <li><strong>Conteúdo Exclusivo:</strong> Bastidores, prévias de lançamentos e momentos únicos que só compartilhamos por lá.</li>
+                        <li><strong>Interação Diária:</strong> Participe de enquetes, deixe seus comentários e faça parte da nossa comunidade apaixonada.</li>
+                        <li><strong>Inspiração e Novidades:</strong> Fique por dentro das últimas tendências do Carnaval, dicas de estilo e muito mais.</li>
+                    </ul>
+                    <p><strong>Não perca nenhum detalhe! Siga-nos agora e faça parte da nossa folia digital!</strong></p>
+                    <a href="https://www.instagram.com/sambavest/" target="_blank" class="btn-instagram-promo">
+                        📷 <strong>Siga @sambavest no Instagram!</strong>
                     </a>
                 </div>
             </div>
@@ -370,10 +362,9 @@
         <section class="about-section">
             <div class="container">
                 <h2 class="section-title">Sobre a Samba Vest</h2>
-                <p class="section-subtitle">Nossa história e compromisso com o carnaval carioca.</p>
-                <div class="about-content">
+                  <div class="about-content">
                     <div class="about-image">
-                        <img src="images/about-us.jpg" alt="Sobre a Samba Vest">
+                        <img src="images/sambavestmini.png" alt="Sobre a Samba Vest">
                     </div>
                     <div class="about-text">
                         <h3>A Paixão Pelo Samba em Cada Fio</h3>
@@ -386,57 +377,68 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="contact-section">
-            <div class="container">
-                <h2 class="section-title">Entre em Contato</h2>
-                <p class="section-subtitle">Fale conosco para dúvidas, sugestões ou parcerias.</p>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="info-item">
-                            <i class="icon-whatsapp"></i>
-                            <span>WhatsApp</span>
-                            <a href="https://wa.me/5521999999999" target="_blank">(21) 99999-9999</a>
-                        </div>
-                        <div class="info-item">
-                            <i class="icon-email"></i>
-                            <span>Email</span>
-                            <a href="mailto:contato@sambavest.com">contato@sambavest.com</a>
-                        </div>
-                        <button class="btn btn-primary mt-3" onclick="window.location.href=\'https://wa.me/5521999999999\'">Falar no WhatsApp</button>
+     <section class="contact-section">
+    <div class="container">
+        <h2 class="section-title">Entre em Contato</h2>
+        <p class="section-subtitle">Tem dúvidas sobre nossos produtos? Entre em contato conosco!</p>
+        <div class="contact-container">
+            <!-- Lado Esquerdo -->
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-item-icon">
+                        <i class="icon-whatsapp"></i>
                     </div>
-                    <div class="contact-form">
-                        <h3>Envie sua Mensagem</h3>
-                        <form action="#" method="POST">
-                            <div class="form-group">
-                                <label for="name">Nome *</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Assunto</label>
-                                <select id="subject" name="subject">
-                                    <option value="">Selecione um assunto</option>
-                                    <option value="duvidas-produtos">Dúvidas sobre produtos</option>
-                                    <option value="status-pedido">Status do pedido</option>
-                                    <option value="sugestoes">Sugestões</option>
-                                    <option value="outro">Outro</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Mensagem *</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                        </form>
+                    <div class="contact-item-content">
+                        <h4>WhatsApp</h4>
+                        <p>(21) 99999-9999</p>
                     </div>
                 </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">
+                        <i class="icon-email"></i>
+                    </div>
+                    <div class="contact-item-content">
+                        <h4>Email</h4>
+                        <p>contato@sambavest.com</p>
+                    </div>
+                </div>
+                <a href="https://wa.me/5521999999999" target="_blank" class="btn-danger whatsapp-btn">
+                    <i class="icon-whatsapp"></i> Falar no WhatsApp
+                </a>
             </div>
-        </section>
-    </main>
+
+            <!-- Lado Direito -->
+            <div class="contact-form">
+                <h3>Envie sua Mensagem</h3>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nome *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <select id="subject" name="subject">
+                            <option value="">Selecione um assunto</option>
+                            <option value="duvidas-produtos">Dúvidas sobre produtos</option>
+                            <option value="status-pedido">Status do pedido</option>
+                            <option value="sugestoes">Sugestões</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-danger">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -451,34 +453,35 @@
                         <a href="https://wa.me/5521999999999" target="_blank"><i class="icon-whatsapp"></i></a>
                     </div>
                 </div>
-                <div class="footer-links">
-                    <h3>Produtos</h3>
-                    <ul>
-                        <li><a href="#">Camisas Carnaval</a></li>
-                        <li><a href="#">Escolas de Samba</a></li>
-                        <li><a href="#">Lançamentos</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h3>Atendimento</h3>
-                    <ul>
-                        <li><a href="#">Contato</a></li>
-                        <li><a href="#">Sobre Nós</a></li>
-                        <li><a href="#">Política de Privacidade</a></li>
-                    </ul>
-                </div>
-            </div>
+          <div class="footer-links">
+    <h3>Produtos</h3>
+    <ul>
+        <li><a href="https://sambavest.com/shop/">Camisas Carnaval</a></li>
+        <li><a href="#">Escolas de Samba</a></li>
+        <li><a href="https://sambavest.com/shop/">Lançamentos</a></li>
+    </ul>
+</div>
+<div class="footer-links">
+    <h3>Atendimento</h3>
+    <ul>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="https://sambavest.com/politica-de-privacidade/">Política de Privacidade</a></li>
+    </ul>
+</div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Samba Vest. Todos os direitos reservados. Site desenvolvido por <a href="https://www.felipeferreira.com.br" target="_blank">Felipe Ferreira</a></p>
+                <p>&copy; 2025 Samba Vest. Todos os direitos reservados. Site desenvolvido por <a href="https://portfoliof-production-779a.up.railway.app/" target="_blank">Felipe Ferreira</a></p>
             </div>
         </div>
     </footer>
 
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5521996959903" target="_blank" class="whatsapp-button" aria-label="Contato via WhatsApp">
+        💬
+    </a>
+
     <!-- Scripts JS -->
-    <!-- JavaScript Modular -->
-    <script src="js/responsive-images.js"></script>
-    <script src="js/instagram-real-posts-production.js"></script>
-    <script src="js/carousel.js"></script>
+    <!-- JavaScript Modular 
     <script src="js/featured-products-fixed.js"></script>
     <script src="js/header.js"></script>
     <script src="js/contact.js"></script>

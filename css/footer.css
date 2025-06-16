@@ -43,13 +43,13 @@
 }
 
 .footer-section ul li a {
-    color: #cbd5e1;
+    color: #f0f0f0; /* Cor mais clara para melhor visibilidade */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: #f8fafc;
+    color: #ffffff; /* Cor branca no hover para destaque */
 }
 
 .social-links {
@@ -379,3 +379,74 @@
     transform: translateY(-2px);
 }
 
+/* Correção para links do rodapé */
+.footer-links a,
+.footer-links a:visited,
+.footer-links a:hover,
+.footer-links a:active {
+    color: #f0f0f0; /* Mantém a mesma cor para todos os estados */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* Estilo visual para .footer-links alinhado com .footer-section */
+.footer-links h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #f8fafc;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Ajuste para .footer-logo (logo + texto) */
+.footer-logo img {
+    max-width: 160px;
+    margin-bottom: 1rem;
+}
+
+.footer-logo p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Social Icons responsivo */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+    transform: scale(1.2);
+}
+
+/* Footer bottom centralizado com visual consistente */
+.footer-bottom {
+    border-top: 1px solid #475569;
+    padding-top: 1rem;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}

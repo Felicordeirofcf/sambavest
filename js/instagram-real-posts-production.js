@@ -8,6 +8,13 @@ class InstagramRealPosts {
     constructor() {
         this.posts = [
             {
+                url: 'https://www.instagram.com/reel/DKQJj2XJknc/?igsh=d3J2czNqYzF6NWg2',
+                fallbackImage: 'images/instagram/reel-camarote.png',
+                type: 'reel',
+                title: 'Você compraria esse camarote na Sapucaí?',
+                description: 'Esse era o camarote mais sofisticado do Carnaval de 1989. Você, compraria um lugarzinho nele?'
+            },
+            {
                 url: 'https://www.instagram.com/reel/DK0MwOkxJZ5/',
                 fallbackImage: 'images/instagram/post2.jpg',
                 type: 'reel',

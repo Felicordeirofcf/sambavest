@@ -1,222 +1,156 @@
-
-
-/* Popup Styles */
-.popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.popup-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.popup-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-    max-width: 500px;
-    width: 90%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
-}
-
-.popup-overlay.active .popup-content {
-    transform: scale(1);
-}
-
-.close-popup {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-}
-
-.popup-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.popup-content h2 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.popup-content p {
-    font-size: 1.2em;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.btn-popup-action {
-    display: inline-block;
-    background: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-.btn-popup-action:hover {
-    background: #0056b3;
-}
-
-
-
-
-/* Instagram Section Styles */
-.instagram-section {
+/* Instagram Promo Section */
+.instagram-promo-section {
     padding: 60px 0;
     background-color: #f8f8f8;
     text-align: center;
 }
 
-.instagram-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.instagram-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-}
-
-.instagram-card .instagram-link {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.profile-card {
-    background: linear-gradient(45deg, #8a3ab9, #e95950);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.profile-card .profile-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.profile-card .profile-avatar {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    margin-right: 15px;
-}
-
-.profile-card .profile-username {
-    font-size: 1.2em;
-    font-weight: bold;
-    flex-grow: 1;
-}
-
-.profile-card .btn-profile {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.profile-card .btn-profile:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-}
-
-.profile-card .profile-content h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.profile-card .profile-content p {
-    font-size: 0.9em;
-    line-height: 1.5;
+.instagram-promo-section .section-title {
+    font-size: 2.5em;
+    color: #333;
     margin-bottom: 20px;
 }
 
-.profile-card .btn-follow {
+.instagram-promo-section .section-description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.instagram-promo-content {
     background-color: #fff;
-    color: #e95950;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.profile-card .btn-follow:hover {
-    background-color: #f0f0f0;
-}
-
-.post-card .post-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.post-card .post-meta {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-}
-
-.post-card .post-meta span {
-    font-size: 0.9em;
+.instagram-promo-content p {
+    font-size: 1.1em;
     color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
 }
 
-.post-card .post-description {
-    padding: 15px;
-    font-size: 0.9em;
-    color: #333;
-    flex-grow: 1;
+.instagram-promo-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.instagram-promo-content ul li {
+    font-size: 1em;
+    color: #444;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+    text-align: left;
+}
+
+.instagram-promo-content ul li::before {
+    content: '✅';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.btn-instagram-promo {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-instagram-promo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-instagram-promo img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    filter: brightness(0) invert(1);
 }
 
 @media (max-width: 768px) {
-    .instagram-grid {
-        grid-template-columns: 1fr;
+    .instagram-promo-section .section-title {
+        font-size: 2em;
     }
+
+    .instagram-promo-section .section-description {
+        font-size: 1em;
+    }
+
+    .instagram-promo-content {
+        padding: 20px;
+    }
+
+    .instagram-promo-content p,
+    .instagram-promo-content ul li {
+        font-size: 0.9em;
+    }
+
+    .btn-instagram-promo {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Link Improvement */
+.footer-links a {
+    color: #f0f0f0; /* Cor mais clara para melhor visibilidade */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff; /* Cor branca no hover para destaque */
+}
+
+.footer-bottom p a {
+    color: #f0f0f0; /* Cor mais clara para o link do nome */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom p a:hover {
+    color: #ffffff; /* Cor branca no hover para destaque */
 }
 
 

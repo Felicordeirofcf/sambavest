@@ -404,3 +404,38 @@
         box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
     }
 }
+
+.destaque-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(135deg, #facc15, #f97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeInUp 0.8s ease;
+}
+
+.destaque-title::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #facc15;
+    display: block;
+    margin: 0.5rem auto 0;
+    border-radius: 4px;
+}
+
+/* Animação opcional de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

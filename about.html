@@ -28,17 +28,10 @@
                 <li><a href="/" class="nav-link">INÍCIO</a></li>
                 <li><a href="https://sambavest.com/shop/" class="nav-link" target="_blank">PRODUTOS</a></li>
                 <li><a href="/sobre" class="nav-link">SOBRE NÓS</a></li>
-                <li><a href="#contact" class="nav-link">CONTATO</a></li>
+                <li><a href="https://wa.me/5521996959903" target="_blank" class="nav-link contact-btn">Contato</a></li>
             </ul>
             
             <div class="nav-actions">
-                <button class="nav-icon" onclick="openSearch()" aria-label="Abrir busca de produtos">🔍</button>
-                <button class="nav-icon" onclick="openAccount()" aria-label="Acessar conta">👤</button>
-                <button class="nav-icon" onclick="toggleWishlist()" aria-label="Lista de desejos">❤️</button>
-                <button class="cart-icon" onclick="toggleCart()" aria-label="Carrinho de compras">
-                    🛒
-                    <span class="cart-count" id="cart-count">0</span>
-                </button>
                 <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu mobile">☰</button>
             </div>
         </nav>
@@ -56,9 +49,6 @@
 
         <section class="about-section content-section">
             <div class="container">
-                <div class="about-logo-section">
-                    <img src="images/sambavestmini.png" alt="Logo Samba Vest" class="about-logo">
-                </div>
                 <p>A SambaVest nasceu da paixão pelo Carnaval carioca e da vontade de aproximar os amantes do samba às suas escolas de samba do coração.</p>
                 <p>Somos especializados na venda de camisas oficiais e licenciadas das mais renomadas escolas de samba do Rio de Janeiro, como Mangueira, Beija-Flor, Portela, Salgueiro, entre outras. Cada peça reflete a autenticidade, qualidade e a história de cada agremiação.</p>
 
@@ -101,40 +91,78 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Samba Vest</h3>
+                <div class="footer-logo">
+                    <img src="images/logos/logo.jpg" alt="Samba Vest Logo">
                     <p>Camisas oficiais e licenciadas do carnaval carioca</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook">📘</a>
-                        <a href="#" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="WhatsApp">📱</a>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/sambavest" target="_blank"><i class="icon-facebook"></i></a>
+                        <a href="https://www.instagram.com/sambavest" target="_blank"><i class="icon-instagram"></i></a>
+                        <a href="https://wa.me/5521999999999" target="_blank"><i class="icon-whatsapp"></i></a>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Produtos</h4>
-                    <ul>
-                        <li><a href="#products">Camisas Carnaval</a></li>
-                        <li><a href="#products">Escolas de Samba</a></li>
-                        <li><a href="#products">Lançamentos</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Atendimento</h4>
-                    <ul>
-                        <li><a href="#contact">Contato</a></li>
-                        <li><a href="/about">Sobre Nós</a></li>
-                        <li><a href="#">Política de Privacidade</a></li>
-                    </ul>
-                </div>
-            </div>
+          <div class="footer-links">
+    <h3>Produtos</h3>
+    <ul>
+        <li><a href="https://sambavest.com/shop/">Camisas Carnaval</a></li>
+        <li><a href="#">Escolas de Samba</a></li>
+        <li><a href="https://sambavest.com/shop/">Lançamentos</a></li>
+    </ul>
+</div>
+<div class="footer-links">
+    <h3>Atendimento</h3>
+    <ul>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="https://sambavest.com/politica-de-privacidade/">Política de Privacidade</a></li>
+    </ul>
+</div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Samba Vest. Todos os direitos reservados. Site desenvolvido por <a href="https://portfoliof-production-779a.up.railway.app/" target="_blank" rel="noopener noreferrer">Felipe Ferreira</a></p>
+                <p>&copy; 2025 Samba Vest. Todos os direitos reservados. Site desenvolvido por <a href="https://portfoliof-production-779a.up.railway.app/" target="_blank">Felipe Ferreira</a></p>
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5521996959903" target="_blank" class="whatsapp-button" aria-label="Contato via WhatsApp">
+        💬
+    </a>
+
+    <!-- Scripts JS -->
+    <!-- JavaScript Modular 
+    <script src="js/featured-products-fixed.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/instagram.js"></script>
+    <script src="js/marketing-tracker.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Service Worker Registration -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("/sw.js")
+                    .then(registration => {
+                        console.log("Service Worker registrado com sucesso: ", registration);
+                    })
+                    .catch(error => {
+                        console.error("Erro ao registrar Service Worker: ", error);
+                    });
+            });
+        }
+    </script>
+</body>
+
+
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5521996959903" target="_blank" class="whatsapp-button" aria-label="Contato via WhatsApp">
+        💬
+    </a>
 
     <script src="js/image-optimization-config.js"></script>
     <script src="js/responsive-images.js"></script>
