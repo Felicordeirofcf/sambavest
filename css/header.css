@@ -158,3 +158,29 @@
     }
 }
 
+/* Esconde o menu mobile inicialmente */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: white;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+  z-index: 999;
+}
+
+/* Mostra o menu quando ativado pelo JS */
+.mobile-menu.active {
+  display: flex;
+}
+
+/* Oculta em telas grandes */
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}

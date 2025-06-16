@@ -15,21 +15,26 @@
 </head>
 <body>
     <header class="header">
-        <nav class="nav container">
-            <a href="/" class="logo">
-                <img src="images/logos/logo.jpg"
-                     alt="Samba Vest - Camisas oficiais e licenciadas do carnaval carioca Rio de Janeiro"
-                     sizes="(max-width: 768px) 120px, 150px"
-                     class="responsive-image logo-img"
-                     loading="eager">
-            </a>
-            
-            <ul class="nav-menu">
-                <li><a href="/" class="nav-link">INÍCIO</a></li>
-                <li><a href="https://sambavest.com/shop/" class="nav-link" target="_blank">PRODUTOS</a></li>
-                <li><a href="/sobre" class="nav-link">SOBRE NÓS</a></li>
-                <li><a href="https://wa.me/5521996959903" target="_blank" class="nav-link contact-btn">Contato</a></li>
-            </ul>
+         <nav>
+    <!-- Menu Desktop -->
+    <ul class="nav-menu">
+      <li><a href="/" class="nav-link">INÍCIO</a></li>
+      <li><a href="https://sambavest.com/shop/" class="nav-link" target="_blank">PRODUTOS</a></li>
+      <li><a href="/sobre" class="nav-link">SOBRE NÓS</a></li>
+    </ul>
+
+    <!-- Botão Mobile -->
+    <div class="nav-actions">
+      <button class="mobile-menu-toggle" aria-label="Menu mobile">☰</button>
+    </div>
+  </nav>
+
+  <!-- Menu Mobile (oculto por padrão) -->
+  <ul class="mobile-menu">
+    <li><a href="/" class="nav-link">INÍCIO</a></li>
+    <li><a href="https://sambavest.com/shop/" class="nav-link" target="_blank">PRODUTOS</a></li>
+    <li><a href="/sobre" class="nav-link">SOBRE NÓS</a></li>
+  </ul>
             
             <div class="nav-actions">
                 <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu mobile">☰</button>
@@ -157,6 +162,12 @@
     <script src="js/marketing-tracker.js"></script>
     <script src="js/header.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+document.getElementById('menu-toggle').addEventListener('click', function () {
+    document.getElementById('mobile-menu').classList.toggle('active');
+});
+</script>
 </body>
 </html>
 

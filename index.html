@@ -119,28 +119,40 @@
     </script>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav container">
-            <a href="#" class="logo">
-                <img src="images/logos/logo.jpg"
-                     alt="Samba Vest - Camisas oficiais e licenciadas do carnaval carioca Rio de Janeiro"
-                     sizes="(max-width: 768px) 120px, 150px"
-                     class="responsive-image logo-img"
-                     loading="eager">
-            </a>
-            
-            <ul class="nav-menu">
-                <li><a href="/" class="nav-link">INÍCIO</a></li>
-                <li><a href="https://sambavest.com/shop/" class="nav-link" target="_blank">PRODUTOS</a></li>
-                <li><a href="/sobre" class="nav-link">SOBRE NÓS</a></li>
-            </ul>
-            
-            <div class="nav-actions">
-                <button class="mobile-menu-toggle" data-action="mobile-menu" aria-label="Menu mobile">☰</button>
-            </div>
-        </nav>
-    </header>
+<header class="header">
+  <nav class="nav container">
+    <!-- Logo -->
+    <a href="#" class="logo">
+      <img
+        src="images/logos/logo.jpg"
+        alt="Samba Vest - Camisas oficiais e licenciadas do carnaval carioca Rio de Janeiro"
+        sizes="(max-width: 768px) 120px, 150px"
+        class="responsive-image logo-img"
+        loading="eager"
+      >
+    </a>
+
+    <!-- Menu desktop -->
+    <ul class="nav-menu">
+      <li><a href="/" class="nav-link">INÍCIO</a></li>
+      <li><a href="https://sambavest.com/shop/" class="nav-link" target="_blank">PRODUTOS</a></li>
+      <li><a href="/sobre" class="nav-link">SOBRE NÓS</a></li>
+    </ul>
+
+    <!-- Botão do menu mobile -->
+    <div class="nav-actions">
+      <button class="mobile-menu-toggle" aria-label="Menu mobile">☰</button>
+    </div>
+  </nav>
+
+  <!-- Menu mobile (fica escondido inicialmente) -->
+  <ul class="mobile-menu">
+    <li><a href="/" class="nav-link">INÍCIO</a></li>
+    <li><a href="https://sambavest.com/shop/" class="nav-link" target="_blank">PRODUTOS</a></li>
+    <li><a href="/sobre" class="nav-link">SOBRE NÓS</a></li>
+  </ul>
+</header>
+
 
     <!-- Main Content -->
     <main>
@@ -542,36 +554,53 @@
             </div>
         </div>
 
-        <script>
-    window.addEventListener("load", function () {
-        const popup = document.getElementById("promoPopup");
-        const closeBtn = document.getElementById("closePopup");
-        const closeIcon = document.querySelector(".popup-close");
+        <!-- Scripts -->
+<script>
+  // Menu Mobile
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
 
-        // Mostrar o popup após 1s
-        setTimeout(() => {
-            popup.classList.add("active");
-        }, 1000);
-
-        // Fechar pelo botão
-        if (closeBtn) {
-            closeBtn.addEventListener("click", () => {
-                popup.classList.remove("active");
-            });
-        }
-
-        // Fechar pelo X
-        if (closeIcon) {
-            closeIcon.addEventListener("click", () => {
-                popup.classList.remove("active");
-            });
-        }
-    });
+    if (toggle && mobileMenu) {
+      toggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+      });
+    }
+  });
 </script>
 
 <script>
-document.querySelectorAll('.calc-shipping-btn').forEach(button => {
-    button.addEventListener('click', function () {
+  // Popup Promocional
+  window.addEventListener("load", function () {
+    const popup = document.getElementById("promoPopup");
+    const closeBtn = document.getElementById("closePopup");
+    const closeIcon = document.querySelector(".popup-close");
+
+    if (popup) {
+      setTimeout(() => {
+        popup.classList.add("active");
+      }, 1000);
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        popup.classList.remove("active");
+      });
+    }
+
+    if (closeIcon) {
+      closeIcon.addEventListener("click", () => {
+        popup.classList.remove("active");
+      });
+    }
+  });
+</script>
+
+<script>
+  // Cálculo de Frete
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.calc-shipping-btn').forEach(button => {
+      button.addEventListener('click', function () {
         const parent = this.closest('.shipping-calculator');
         const cepInput = parent.querySelector('.cep-input');
         const shippingResult = parent.querySelector('.shipping-result');
@@ -579,23 +608,22 @@ document.querySelectorAll('.calc-shipping-btn').forEach(button => {
         const cep = cepInput.value.trim().replace(/\D/g, '');
 
         if (!cep || cep.length !== 8) {
-            alert('Por favor, insira um CEP válido com 8 dígitos.');
-            return;
+          alert('Por favor, insira um CEP válido com 8 dígitos.');
+          return;
         }
 
-        // Simulação simples de preços conforme região
+        // Simulação simples
         let pac = 'R$ 19,90';
         let sedex = 'R$ 29,90';
 
         if (cep.startsWith('2')) {
-            pac = 'R$ 14,90';
-            sedex = 'R$ 24,90';
+          pac = 'R$ 14,90';
+          sedex = 'R$ 24,90';
         } else if (cep.startsWith('3')) {
-            pac = 'R$ 16,90';
-            sedex = 'R$ 26,90';
+          pac = 'R$ 16,90';
+          sedex = 'R$ 26,90';
         }
 
-        // Preencher os valores dinamicamente
         const pacElement = shippingResult.querySelector('.shipping-option:nth-child(1) .shipping-price');
         const sedexElement = shippingResult.querySelector('.shipping-option:nth-child(2) .shipping-price');
 
@@ -603,12 +631,10 @@ document.querySelectorAll('.calc-shipping-btn').forEach(button => {
         sedexElement.textContent = sedex;
 
         shippingResult.style.display = 'block';
+      });
     });
-});
+  });
 </script>
 
 </body>
-
-
 </html>
-

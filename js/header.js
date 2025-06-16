@@ -13,9 +13,13 @@ class HeaderManager {
 
     setupEventListeners() {
         // Mobile menu toggle
-        const mobileToggle = document.querySelector('.mobile-menu-toggle');
-        if (mobileToggle) {
-            mobileToggle.addEventListener('click', () => this.toggleMobileMenu());
+        document.addEventListener('DOMContentLoaded', () => {
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
         }
 
         // Scroll effect no header
