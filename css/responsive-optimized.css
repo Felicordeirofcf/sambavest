@@ -599,15 +599,28 @@
     gap: var(--space-xs);
     padding: var(--space-sm);
 }
-
-/* Corrigir layout do WhatsApp button */
 .whatsapp-button {
-    width: clamp(50px, 10vw, 60px);
-    height: clamp(50px, 10vw, 60px);
-    bottom: clamp(15px, 3vw, 20px);
-    right: clamp(15px, 3vw, 20px);
-    font-size: clamp(var(--font-xl), 4vw, var(--font-2xl));
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.whatsapp-button:hover {
+    background-color: #20b358;
+    transform: scale(1.1);
+}
+
 
 /* ========================================
    12. PRINT STYLES
