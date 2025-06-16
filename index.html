@@ -50,6 +50,8 @@
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/featured-products.css">
     <link rel="stylesheet" href="css/instagram-embed.css">
+    <link rel="stylesheet" href="css/instagram-dynamic.css">
+    <link rel="stylesheet" href="css/instagram-real-posts.css">
     <link rel="stylesheet" href="css/promotional-prices.css">
     <link rel="stylesheet" href="css/woocommerce-card.css">
     <link rel="stylesheet" href="css/products.css">
@@ -337,151 +339,28 @@
         </section>
 
         <!-- Instagram Section -->
-        <section class="instagram-section">
+        <section class="instagram-section" id="instagram-section">
             <div class="container">
                 <div class="instagram-header">
                     <h2 class="section-title">Veja nosso Instagram</h2>
                     <p class="section-subtitle">Acompanhe as novidades, bastidores e muito mais em nosso Instagram oficial.</p>
                 </div>
                 
-                <div class="instagram-embed-grid">
-                    <!-- Post 1 - Perfil @sambavest -->
-                    <div class="instagram-embed-card">
-                        <div class="embed-header">
-                            <div class="profile-info">
-                                <img src="images/logo-icon.png" alt="SambaVest" class="profile-pic">
-                                <div class="profile-details">
-                                    <span class="username">@sambavest</span>
-                                    <span class="verified">✓</span>
-                                </div>
-                            </div>
-                            <a href="https://www.instagram.com/sambavest/" target="_blank" class="follow-btn">Seguir</a>
-                        </div>
-                        <div class="embed-content">
-                            <img src="images/instagram/post1.jpg" alt="Post Instagram" loading="lazy">
-                            <div class="play-overlay">
-                                <div class="play-icon">▶</div>
-                            </div>
-                        </div>
-                        <div class="embed-footer">
-                            <a href="https://www.instagram.com/sambavest/" target="_blank" class="view-post">Ver Post</a>
-                        </div>
+                <!-- Grid será populado dinamicamente pelo JavaScript -->
+                <div class="instagram-embed-grid" id="instagram-grid">
+                    <!-- Loading placeholder -->
+                    <div class="loading-placeholder">
+                        <div class="loading-spinner"></div>
+                        <p>Carregando posts do Instagram...</p>
                     </div>
-
-                    <!-- Post 2 -->
-                    <div class="instagram-embed-card">
-                        <div class="embed-header">
-                            <div class="profile-info">
-                                <img src="images/logo-icon.png" alt="SambaVest" class="profile-pic">
-                                <div class="profile-details">
-                                    <span class="username">@sambavest</span>
-                                    <span class="verified">✓</span>
-                                </div>
-                            </div>
-                            <a href="https://www.instagram.com/reel/DK0MwOkxJZ5/?igsh=ZHdvZXFoeW8yNzF2" target="_blank" class="follow-btn">Seguir</a>
-                        </div>
-                        <div class="embed-content">
-                            <img src="images/instagram/post2.jpg" alt="Post Instagram" loading="lazy">
-                            <div class="play-overlay">
-                                <div class="play-icon">▶</div>
-                            </div>
-                        </div>
-                        <div class="embed-footer">
-                            <a href="https://www.instagram.com/reel/DK0MwOkxJZ5/?igsh=ZHdvZXFoeW8yNzF2" target="_blank" class="view-post">Ver Post</a>
-                        </div>
-                    </div>
-
-                    <!-- Post 3 -->
-                    <div class="instagram-embed-card">
-                        <div class="embed-header">
-                            <div class="profile-info">
-                                <img src="images/logo-icon.png" alt="SambaVest" class="profile-pic">
-                                <div class="profile-details">
-                                    <span class="username">@sambavest</span>
-                                    <span class="verified">✓</span>
-                                </div>
-                            </div>
-                            <a href="https://www.instagram.com/reel/DKuaAL5R9ye/?igsh=cHVmeWMxbTJhbmI=" target="_blank" class="follow-btn">Seguir</a>
-                        </div>
-                        <div class="embed-content">
-                            <img src="images/instagram/post3.jpg" alt="Post Instagram" loading="lazy">
-                            <div class="play-overlay">
-                                <div class="play-icon">▶</div>
-                            </div>
-                        </div>
-                        <div class="embed-footer">
-                            <a href="https://www.instagram.com/reel/DKuaAL5R9ye/?igsh=cHVmeWMxbTJhbmI=" target="_blank" class="view-post">Ver Post</a>
-                        </div>
-                    </div>
-
-                    <!-- Post 4 -->
-                    <div class="instagram-embed-card">
-                        <div class="embed-header">
-                            <div class="profile-info">
-                                <img src="images/logo-icon.png" alt="SambaVest" class="profile-pic">
-                                <div class="profile-details">
-                                    <span class="username">@sambavest</span>
-                                    <span class="verified">✓</span>
-                                </div>
-                            </div>
-                            <a href="https://www.instagram.com/reel/DKdBpRHJ20O/?igsh=cHlneGdkOW90Mm14" target="_blank" class="follow-btn">Seguir</a>
-                        </div>
-                        <div class="embed-content">
-                            <img src="images/instagram/post4.jpg" alt="Post Instagram" loading="lazy">
-                            <div class="play-overlay">
-                                <div class="play-icon">▶</div>
-                            </div>
-                        </div>
-                        <div class="embed-footer">
-                            <a href="https://www.instagram.com/reel/DKdBpRHJ20O/?igsh=cHlneGdkOW90Mm14" target="_blank" class="view-post">Ver Post</a>
-                        </div>
-                    </div>
-
-                    <!-- Post 5 -->
-                    <div class="instagram-embed-card">
-                        <div class="embed-header">
-                            <div class="profile-info">
-                                <img src="images/logo-icon.png" alt="SambaVest" class="profile-pic">
-                                <div class="profile-details">
-                                    <span class="username">@sambavest</span>
-                                    <span class="verified">✓</span>
-                                </div>
-                            </div>
-                            <a href="https://www.instagram.com/reel/DKQJj2XJknc/?igsh=d3J2czNqYzF6NWg2" target="_blank" class="follow-btn">Seguir</a>
-                        </div>
-                        <div class="embed-content">
-                            <img src="images/instagram/post5.jpg" alt="Post Instagram" loading="lazy">
-                            <div class="play-overlay">
-                                <div class="play-icon">▶</div>
-                            </div>
-                        </div>
-                        <div class="embed-footer">
-                            <a href="https://www.instagram.com/reel/DKQJj2XJknc/?igsh=d3J2czNqYzF6NWg2" target="_blank" class="view-post">Ver Post</a>
-                        </div>
-                    </div>
-
-                    <!-- Post 6 -->
-                    <div class="instagram-embed-card">
-                        <div class="embed-header">
-                            <div class="profile-info">
-                                <img src="images/logo-icon.png" alt="SambaVest" class="profile-pic">
-                                <div class="profile-details">
-                                    <span class="username">@sambavest</span>
-                                    <span class="verified">✓</span>
-                                </div>
-                            </div>
-                            <a href="https://www.instagram.com/reel/DJ-JOo5JkDK/?igsh=MWFjYzN2N3UwdnNyOA==" target="_blank" class="follow-btn">Seguir</a>
-                        </div>
-                        <div class="embed-content">
-                            <img src="images/instagram/post1.jpg" alt="Post Instagram" loading="lazy">
-                            <div class="play-overlay">
-                                <div class="play-icon">▶</div>
-                            </div>
-                        </div>
-                        <div class="embed-footer">
-                            <a href="https://www.instagram.com/reel/DJ-JOo5JkDK/?igsh=MWFjYzN2N3UwdnNyOA==" target="_blank" class="view-post">Ver Post</a>
-                        </div>
-                    </div>
+                </div>
+                
+                <!-- Botão para ver mais posts -->
+                <div class="instagram-footer">
+                    <a href="https://www.instagram.com/sambavest/" target="_blank" class="btn btn-instagram">
+                        <span class="instagram-icon">📷</span>
+                        Ver mais no Instagram
+                    </a>
                 </div>
             </div>
         </section>
@@ -490,13 +369,13 @@
         <section class="about-section">
             <div class="container">
                 <h2 class="section-title">Sobre a Samba Vest</h2>
-                <p class="section-subtitle"></p>
+                <p class="section-subtitle">Nossa história e compromisso com o carnaval carioca.</p>
                 <div class="about-content">
                     <div class="about-image">
-                        <img src="images/sambavestmini.png" alt="Sobre a Samba Vest">
+                        <img src="images/about-us.jpg" alt="Sobre a Samba Vest">
                     </div>
                     <div class="about-text">
-                        <h3></h3>
+                        <h3>A Paixão Pelo Samba em Cada Fio</h3>
                         <p>A Samba Vest nasceu da paixão pelo carnaval e da vontade de levar a emoção dos desfiles para o dia a dia dos sambistas. Somos uma empresa dedicada a criar e comercializar camisas oficiais e licenciadas das maiores escolas de samba do Rio de Janeiro.</p>
                         <p>Nosso compromisso é com a qualidade, a autenticidade e o respeito à história de cada agremiação. Trabalhamos com tecidos de alta durabilidade, estampas vibrantes e um caimento perfeito, garantindo que você vista não apenas uma camisa, mas um pedaço da alma do carnaval.</p>
                         <p>Acreditamos que o samba é mais do que música e dança; é cultura, é identidade, é paixão. E queremos que você sinta essa paixão em cada peça da Samba Vest. Vista seu amor pelo samba, vista Samba Vest!</p>
@@ -516,14 +395,14 @@
                         <div class="info-item">
                             <i class="icon-whatsapp"></i>
                             <span>WhatsApp</span>
-                            <a href="https://wa.me/5521996959903" target="_blank">(21) 99695-9903</a>
+                            <a href="https://wa.me/5521999999999" target="_blank">(21) 99999-9999</a>
                         </div>
                         <div class="info-item">
                             <i class="icon-email"></i>
                             <span>Email</span>
                             <a href="mailto:contato@sambavest.com">contato@sambavest.com</a>
                         </div>
-                        <button class="btn btn-primary mt-3" onclick="window.location.href=\'https://wa.me/5521996959903\'">Falar no WhatsApp</button>
+                        <button class="btn btn-primary mt-3" onclick="window.location.href=\'https://wa.me/5521999999999\'">Falar no WhatsApp</button>
                     </div>
                     <div class="contact-form">
                         <h3>Envie sua Mensagem</h3>
@@ -597,11 +476,13 @@
     <!-- Scripts JS -->
     <!-- JavaScript Modular -->
     <script src="js/responsive-images.js"></script>
+    <script src="js/instagram-real-posts.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/featured-products-fixed.js"></script>
     <script src="js/header.js"></script>
     <script src="js/contact.js"></script>
     <script src="js/products.js"></script>
+    <script src="js/instagram.js"></script>
     <script src="js/marketing-tracker.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/main.js"></script>
