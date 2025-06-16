@@ -1,0 +1,323 @@
+/* Instagram Real Posts - Versão Produção */
+
+/* Cards melhorados para fallback */
+.instagram-embed-card.enhanced-fallback-post {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e1e8ed;
+}
+
+.instagram-embed-card.enhanced-fallback-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Conteúdo melhorado */
+.embed-content.enhanced-content {
+    position: relative;
+    padding: 0;
+}
+
+.image-container {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.enhanced-fallback-post:hover .image-container img {
+    transform: scale(1.05);
+}
+
+/* Overlay com informações */
+.content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0.8) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.enhanced-fallback-post:hover .content-overlay {
+    opacity: 1;
+}
+
+/* Ícone de play melhorado */
+.content-overlay .play-icon {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.enhanced-fallback-post:hover .play-icon {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Informações do conteúdo */
+.content-info {
+    text-align: center;
+    color: white;
+    margin-top: auto;
+}
+
+.content-info h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.content-info p {
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.9;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer melhorado */
+.embed-footer.enhanced-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #efefef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ações do post (like, comment, share) */
+.post-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.action-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: scale(1.1);
+}
+
+/* Botão de like com animação */
+.like-btn .heart {
+    display: inline;
+    transition: all 0.3s ease;
+}
+
+.like-btn .heart-filled {
+    display: none;
+    color: #e91e63;
+}
+
+.like-btn.active .heart {
+    display: none;
+}
+
+.like-btn.active .heart-filled {
+    display: inline;
+    animation: heartBeat 0.6s ease;
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.3); }
+    50% { transform: scale(1.1); }
+    75% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Indicador de tipo de mídia */
+.enhanced-fallback-post[data-media-type="reel"]::before {
+    content: 'REEL';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+}
+
+.enhanced-fallback-post[data-media-type="carousel"]::before {
+    content: '📷+';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+}
+
+/* Animações de entrada escalonadas */
+.enhanced-fallback-post {
+    animation: slideInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.enhanced-fallback-post:nth-child(1) { animation-delay: 0.1s; }
+.enhanced-fallback-post:nth-child(2) { animation-delay: 0.2s; }
+.enhanced-fallback-post:nth-child(3) { animation-delay: 0.3s; }
+.enhanced-fallback-post:nth-child(4) { animation-delay: 0.4s; }
+.enhanced-fallback-post:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade melhorada */
+@media (max-width: 768px) {
+    .content-overlay .play-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .content-info h4 {
+        font-size: 14px;
+    }
+    
+    .content-info p {
+        font-size: 12px;
+    }
+    
+    .post-actions {
+        gap: 10px;
+    }
+    
+    .action-btn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .embed-footer.enhanced-footer {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+    
+    .post-actions {
+        justify-content: center;
+    }
+    
+    .view-post {
+        text-align: center;
+    }
+}
+
+/* Estados especiais */
+.enhanced-fallback-post.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.enhanced-fallback-post.error {
+    border: 2px dashed #ff6b6b;
+    opacity: 0.8;
+}
+
+/* Modo escuro */
+@media (prefers-color-scheme: dark) {
+    .enhanced-fallback-post {
+        background: #1a1a1a;
+        border-color: #333;
+    }
+    
+    .embed-footer.enhanced-footer {
+        border-top-color: #333;
+    }
+    
+    .action-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Melhorias de acessibilidade */
+.enhanced-fallback-post:focus-within {
+    outline: 2px solid #E4405F;
+    outline-offset: 2px;
+}
+
+.action-btn:focus {
+    outline: 2px solid #0095f6;
+    outline-offset: 2px;
+}
+
+/* Efeito de shimmer para loading */
+.enhanced-fallback-post.loading .image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
