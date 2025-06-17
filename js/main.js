@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Configurar Google Analytics Enhanced Ecommerce
     if (typeof gtag !== 'undefined') {
-        gtag('config', 'GT-TNGXSTX', {
+        gtag('config', 'G-M5L2JFYEEP', {
             custom_map: {
                 'custom_parameter_1': 'escola_samba',
                 'custom_parameter_2': 'tipo_produto'

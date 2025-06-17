@@ -46,7 +46,7 @@ Após o deploy, configure os IDs dos pixels e analytics:
 - Arquivo: `includes/marketing-pixels.html`
 
 #### Google Analytics
-- Substitua `GT-TNGXSTX` pelo seu ID do GA4
+- Substitua `G-M5L2JFYEEP` pelo seu ID do GA4
 - Arquivo: `includes/marketing-pixels.html`
 
 #### Google Ads
